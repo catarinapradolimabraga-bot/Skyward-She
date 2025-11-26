@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skyward She — Where girls engineer the future of aerospace</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Bebas+Neue&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Skyward She — a blog by a young Brazilian aspiring aerospace engineer who writes about women in aerospace, engineering explanation, and the Space Age aesthetic.">
+
+  <style>
+    :root{
+      --steel-gray: #6D7480;
+      --metal-silver: #C4C7CC;
+      --aerospace-blue:#0A4C8A;
+      --retro-red:#B63E3E;
+      --off-white:#F2F0EB;
+      --muted-navy:#1D2A3A;
+      --space-gold:#D2A35E;
+
+      --max-width:1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--off-white), #f7f8fa 40%);
+      color:var(--muted-navy);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    a{color:var(--aerospace-blue); text-decoration:none}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{display:flex;flex-direction:column}
+    .site-title{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:1px;color:var(--muted-navy)}
+    .slogan{font-family:'Poppins',sans-serif;font-size:12px;color:var(--steel-gray);margin-top:2px}
+
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav li{font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center;padding:40px 0}
+    .hero-card{background:white;border-radius:12px;padding:28px;box-shadow:0 6px 18px rgba(29,42,58,0.08)}
+    .hero h1{font-family:'Bebas Neue',sans-serif;font-size:40px;margin:0;color:var(--aerospace-blue)}
+    .lead{margin-top:12px;color:var(--steel-gray);font-size:15px}
+    .cta{display:inline-block;margin-top:18px;padding:12px 18px;border-radius:8px;background:var(--aerospace-blue);color:white;font-weight:600}
+
+    .hero-side{background:linear-gradient(180deg, #ffffff, #f4f6f9);border-radius:12px;padding:22px;text-align:center;border:1px solid var(--metal-silver)}
+    .hero-side img{max-width:100%;height:auto;border-radius:8px}
+    .small{font-size:13px;color:var(--steel-gray)}
+
+    /* Grid for sections */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 14px rgba(29,42,58,0.06);min-height:150px}
+    .card h3{margin:8px 0 6px 0;color:var(--muted-navy);font-family:Poppins, sans-serif}
+    .card p{color:var(--steel-gray);font-size:14px}
+
+    /* Retro strip */
+    .retro{margin-top:28px;padding:22px;border-radius:10px;background:linear-gradient(90deg, rgba(22,36,58,0.98), rgba(10,36,70,1));color:white;display:flex;gap:18px;align-items:center}
+    .retro .left{flex:2}
+    .retro h2{font-family:'Bebas Neue',sans-serif;margin:0;color:var(--space-gold)}
+    .retro p{margin:8px 0 0 0;color:rgba(255,255,255,0.9)}
+
+    /* About + Contact */
+    .two-col{display:grid;grid-template-columns:1fr 340px;gap:22px;margin-top:28px}
+    .about{background:white;padding:20px;border-radius:10px}
+    .about img{width:100%;height:auto;border-radius:8px}
+
+    .contact{background:linear-gradient(180deg,#fff,#fbfbfd);padding:18px;border-radius:10px;border:1px solid var(--metal-silver)}
+    .contact input,.contact textarea{width:100%;padding:10px;margin-top:8px;border:1px solid #e4e6ea;border-radius:6px;font-size:14px}
+    .contact button{margin-top:10px;padding:10px 12px;border-radius:8px;background:var(--retro-red);color:white;border:0;font-weight:600}
+
+    footer{margin-top:40px;padding:18px 0;text-align:center;color:var(--steel-gray);font-size:13px}
+
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      .grid{grid-template-columns:1fr}
+      .site-title{font-size:22px}
+    }
+
+    /* small utilities */
+    .muted{color:var(--steel-gray)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <div class="site-title">Skyward She</div>
+          <div class="slogan">Where girls engineer the future of aerospace</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#aero101">Aerospace 101</a></li>
+          <li><a href="#women">Women in STEM</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-card">
+          <h1>Engineering, history and a female perspective — starting now</h1>
+          <p class="lead">Skyward She is a space-age inspired blog by Catarina, a young Brazilian aspiring aerospace engineer. Here you'll find explainers, profiles of women in aerospace, vintage space-age stories, and practical tips to begin your research journey.</p>
+          <a class="cta" href="#articles">Read latest</a>
+        </div>
+
+        <aside class="hero-side">
+          <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="vintage rocket poster">
+          <div class="small muted">Featured: How the Space Age still shapes modern aerospace design</div>
+        </aside>
+      </section>
+
+      <section aria-label="grid" class="grid" id="articles">
+        <article class="card">
+          <h3>Why women in aerospace matter</h3>
+          <p>This excerpt introduces the main ideas: diversity improves safety and innovation, and representation inspires future generations. <a href="#">Read more →</a></p>
+        </article>
+
+        <article class="card">
+          <h3>How to start a research project in high school</h3>
+          <p>Practical tips: choose a question, find a mentor, build simple experiments, and document everything. <a href="#">Read more →</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Vintage: The Space Age design language</h3>
+          <p>A look at 60s/70s NASA posters, typography and how the era still influences aerospace aesthetics. <a href="#">Read more →</a></p>
+        </article>
+      </section>
+
+      <section class="retro">
+        <div class="left">
+          <h2>Space Age Insights</h2>
+          <p>From Saturn V to modern launch vehicles — design, engineering, and the human stories behind the machines. Expect short features that mix history with hands-on engineering thinking.</p>
+        </div>
+        <div class="right muted">
+          <div>Subscribe for updates (email coming soon)</div>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="about" id="about">
+          <h2>About Catarina</h2>
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Catarina profile placeholder">
+          <p class="muted">I am a 9th grade student from Brazil, passionate about aerospace engineering, STEM education and building pathways for girls to join research. I participate in science olympiads and local engineering projects.</p>
+          <p>Goal: inspire girls to start research early and show how aerospace engineering is accessible to students with curiosity and persistence.</p>
+        </div>
+
+        <aside class="contact" id="contact">
+          <h3>Contact</h3>
+          <p class="small muted">Want to collaborate, share a story, or suggest a topic? Send a quick message.</p>
+          <!-- FORM: To make the contact form work, sign up for Formspree (https://formspree.io/) and replace the action attribute below with your Formspree endpoint. -->
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <label>Name</label>
+            <input type="text" name="name" required placeholder="Your name">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="you@example.com">
+            <label>Message</label>
+            <textarea name="message" rows="4" required placeholder="Write a short message..."></textarea>
+            <button type="submit">Send</button>
+            <p class="muted" style="font-size:12px;margin-top:8px">Or email directly: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+          </form>
+        </aside>
+      </section>
+
+      <footer>
+        <div>© Skyward She • Built with care by Catarina</div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Helpful JS: small script to insert new posts from a simple JSON file (posts.json) if you choose to maintain it in the repo -->
+  <script>
+    /*
+      Instructions:
+      - If you add a file posts.json to your repo (same folder) with an array of posts, this script will dynamically render them into the #articles grid.
+      - Format example (posts.json):
+        [{"title":"Post 1","excerpt":"Short text","url":"/posts/post1.html"}, ...]
+    */
+    async function loadPosts(){
+      try{
+        const res = await fetch('posts.json');
+        if(!res.ok) return;
+        const posts = await res.json();
+        const grid = document.querySelector('#articles');
+        grid.innerHTML = '';
+        posts.slice(0,6).forEach(p=>{
+          const art = document.createElement('article'); art.className='card';
+          art.innerHTML = `<h3>${p.title}</h3><p>${p.excerpt} <a href='${p.url}'>Read more →</a></p>`;
+          grid.appendChild(art);
+        })
+      }catch(e){console.log('no posts.json or fetch error', e)}
+    }
+    loadPosts();
+  </script>
+</body>
+</html>
