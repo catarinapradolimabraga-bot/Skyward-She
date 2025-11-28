@@ -91,6 +91,18 @@
       .hero{flex-direction:column}
       .hero-figure{order:-1}
       .about-wrap{flex-direction:column}
+      /* thumbnail for post cards */
+.post-card .thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  display:block;
+  margin-bottom:12px;
+}
+@media (max-width:420px) {
+  .post-card .thumb { height:120px; }
+}
     }
   </style>
 </head>
