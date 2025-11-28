@@ -1,219 +1,198 @@
-</div>
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Skyward She — Where girls engineer the future of aerospace</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Bebas+Neue&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-
-  <meta name="description" content="Skyward She — a blog by a young Brazilian aspiring aerospace engineer who writes about women in aerospace, engineering explanation, and the Space Age aesthetic.">
+  <meta name="description" content="Skyward She — a space-age inspired blog by Catarina from Porto Velho, Rondônia. Women in aerospace, projects, and tips for young researchers.">
 
   <style>
     :root{
-      --steel-gray: #6D7480;
-      --metal-silver: #C4C7CC;
-      --aerospace-blue:#0A4C8A;
-      --retro-red:#B63E3E;
-      --off-white:#F2F0EB;
-      --muted-navy:#1D2A3A;
-      --space-gold:#D2A35E;
-
-      --max-width:1100px;
+      --bg:#F7F8FA; --card:#ffffff; --accent:#0A4C8A; --muted:#6D7480; --soft:#F1F4F6;
+      --maxw:1100px; --radius:12px;
     }
-
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background:linear-gradient(180deg,var(--off-white), #f7f8fa 40%);
-      color:var(--muted-navy);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
-
-    a{color:var(--aerospace-blue); text-decoration:none}
-
-    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
-
-    /* Header */
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .brand{display:flex;gap:16px;align-items:center}
-    .logo{display:flex;flex-direction:column}
-    .site-title{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:1px;color:var(--muted-navy)}
-    .slogan{font-family:'Poppins',sans-serif;font-size:12px;color:var(--steel-gray);margin-top:2px}
-
-    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    html,body{height:100%;margin:0;padding:0;background:var(--bg);font-family:Inter,Arial,sans-serif;color:#1d2a3a}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+    header{padding:20px 0;background:transparent}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-family:"Bebas Neue",sans-serif;color:var(--accent);font-size:26px;letter-spacing:1px}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center}
     nav li{font-weight:600}
 
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center;padding:40px 0}
-    .hero-card{background:white;border-radius:12px;padding:28px;box-shadow:0 6px 18px rgba(29,42,58,0.08)}
-    .hero h1{font-family:'Bebas Neue',sans-serif;font-size:40px;margin:0;color:var(--aerospace-blue)}
-    .lead{margin-top:12px;color:var(--steel-gray);font-size:15px}
-    .cta{display:inline-block;margin-top:18px;padding:12px 18px;border-radius:8px;background:var(--aerospace-blue);color:white;font-weight:600}
+    /* hero */
+    .hero{display:flex;gap:28px;margin:12px 0 28px;flex-wrap:wrap;align-items:stretch}
+    .hero-card{flex:1;min-width:300px;background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 12px 28px rgba(12,30,60,0.06)}
+    .hero-card h1{font-family:"Bebas Neue",sans-serif;color:var(--accent);font-size:34px;margin:0 0 12px}
+    .hero-card p{color:var(--muted);line-height:1.6}
+    .hero-figure{flex:0 0 380px;min-width:260px}
+    .hero-figure img{width:100%;border-radius:10px;border:1px solid #e6e9ec;display:block}
+    .btn{display:inline-block;padding:12px 18px;background:var(--accent);color:#fff;border-radius:9px;margin-top:18px}
 
-    .hero-side{background:linear-gradient(180deg, #ffffff, #f4f6f9);border-radius:12px;padding:22px;text-align:center;border:1px solid var(--metal-silver)}
-    .hero-side img{max-width:100%;height:auto;border-radius:8px}
-    .small{font-size:13px;color:var(--steel-gray)}
+    /* posts grid */
+    .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:40px 0}
+    .post-card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 18px rgba(12,30,60,0.04)}
+    .post-card h3{margin:0 0 10px;font-size:18px;color:#0f3f65}
+    .post-card p{margin:0;color:var(--muted);line-height:1.5}
+    .post-meta{font-size:13px;color:#9aa4b2;margin-top:10px}
 
-    /* Grid for sections */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 14px rgba(29,42,58,0.06);min-height:150px}
-    .card h3{margin:8px 0 6px 0;color:var(--muted-navy);font-family:Poppins, sans-serif}
-    .card p{color:var(--steel-gray);font-size:14px}
+    /* about */
+    .about-section{padding:36px 0 28px}
+    .about-wrap{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+    .about-img{flex:0 0 360px;min-width:220px}
+    .about-img img{width:100%;border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,0.06)}
+    .about-text{flex:1;min-width:240px}
+    .about-text h2{font-family:"Bebas Neue",sans-serif;color:var(--accent);font-size:28px;margin:0 0 12px}
+    .about-text p{color:var(--muted);line-height:1.6}
 
-    /* Retro strip */
-    .retro{margin-top:28px;padding:22px;border-radius:10px;background:linear-gradient(90deg, rgba(22,36,58,0.98), rgba(10,36,70,1));color:white;display:flex;gap:18px;align-items:center}
-    .retro .left{flex:2}
-    .retro h2{font-family:'Bebas Neue',sans-serif;margin:0;color:var(--space-gold)}
-    .retro p{margin:8px 0 0 0;color:rgba(255,255,255,0.9)}
+    /* contact */
+    .contact-wrap{padding:36px 0}
+    .contact-grid{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+    .contact-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 18px rgba(12,30,60,0.04)}
+    .footer{padding:24px 0;text-align:center;color:#98a3ad;font-size:14px;margin-top:28px}
 
-    /* About + Contact */
-    .two-col{display:grid;grid-template-columns:1fr 340px;gap:22px;margin-top:28px}
-    .about{background:white;padding:20px;border-radius:10px}
-    .about img{width:100%;height:auto;border-radius:8px}
-
-    .contact{background:linear-gradient(180deg,#fff,#fbfbfd);padding:18px;border-radius:10px;border:1px solid var(--metal-silver)}
-    .contact input,.contact textarea{width:100%;padding:10px;margin-top:8px;border:1px solid #e4e6ea;border-radius:6px;font-size:14px}
-    .contact button{margin-top:10px;padding:10px 12px;border-radius:8px;background:var(--retro-red);color:white;border:0;font-weight:600}
-
-    footer{margin-top:40px;padding:18px 0;text-align:center;color:var(--steel-gray);font-size:13px}
-
-    @media(max-width:980px){
-      .hero{grid-template-columns:1fr}
-      .grid{grid-template-columns:repeat(2,1fr)}
-      .two-col{grid-template-columns:1fr}
+    /* small helpers */
+    .muted{color:var(--muted)}
+    @media(max-width:720px){
+      .nav{flex-direction:column;align-items:flex-start;gap:10px}
+      .hero{flex-direction:column}
+      .hero-figure{order:-1}
+      .about-wrap{flex-direction:column}
     }
-    @media(max-width:600px){
-      .grid{grid-template-columns:1fr}
-      .site-title{font-size:22px}
-    }
-
-    /* small utilities */
-    .muted{color:var(--steel-gray)}
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">
-          <div class="site-title">Skyward She</div>
-          <div class="slogan">Where girls engineer the future of aerospace</div>
-        </div>
-      </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="brand">Skyward She</div>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#articles">Articles</a></li>
-          <li><a href="#aero101">Aerospace 101</a></li>
-          <li><a href="#women">Women in STEM</a></li>
+          <li><a href="posts/post1.html">Articles</a></li>
+          <li><a href="aerospace101.html">Aerospace 101</a></li>
+          <li><a href="womeninstem.html">Women in STEM</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main id="home">
-      <section class="hero">
-        <div class="hero-card">
-          <h1>Engineering, history and a female perspective — starting now</h1>
-          <p class="lead">Skyward She is a space-age inspired blog by Catarina, a young Brazilian aspiring aerospace engineer. Here you'll find explainers, profiles of women in aerospace, vintage space-age stories, and practical tips to begin your research journey.</p>
-          <a class="cta" href="#articles">Read latest</a>
-        </div>
+  <!-- MAIN -->
+  <main class="container">
 
-        <aside class="hero-side">
-          <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="vintage rocket poster">
-          <div class="small muted">Featured: How the Space Age still shapes modern aerospace design</div>
-        </aside>
-      </section>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Engineering, history and a female perspective — starting now</h1>
+        <p>Skyward She is a space-age inspired blog by Catarina, an aspiring aerospace engineer from Porto Velho. Here you'll find explainers, profiles of women in aerospace, vintage space-age stories, and practical tips to begin your research journey.</p>
+        <a class="btn" href="posts/post1.html">Read latest</a>
+      </div>
 
-      <section aria-label="grid" class="grid" id="articles">
-        <article class="card">
+      <div class="hero-figure">
+        <!-- make sure this file exists in your repo or upload it (hero-earth.jpg) -->
+        <img alt="Earth from space" src="https://raw.githubusercontent.com/catarinapradolimabraga-bot/Skyward-She/main/hero-earth.jpg">
+        <div style="font-size:13px;color:#9aa4b2;margin-top:8px;text-align:center">Featured: How the Space Age still shapes modern aerospace design</div>
+      </div>
+    </section>
+
+    <!-- POSTS GRID -->
+    <section>
+      <div class="posts">
+        <article class="post-card">
           <h3>Why women in aerospace matter</h3>
-          <p>This excerpt introduces the main ideas: diversity improves safety and innovation, and representation inspires future generations. <a href="#">Read more →</a></p>
+          <p>Diversity leads to safer, smarter aerospace systems — and representation inspires the next generation.</p>
+          <div class="post-meta">Published on Nov 26, 2025 — <a href="posts/post1.html">Read more →</a></div>
         </article>
 
-        <article class="card">
-          <h3>How to start a research project in high school</h3>
-          <p>Practical tips: choose a question, find a mentor, build simple experiments, and document everything. <a href="#">Read more →</a></p>
+        <article class="post-card">
+          <h3>How I started my research journey at 13</h3>
+          <p>Practical steps for high-school students: choose a question, find a mentor, document everything.</p>
+          <div class="post-meta">Published on Nov 26, 2025 — <a href="posts/post2.html">Read more →</a></div>
         </article>
 
-        <article class="card">
+        <article class="post-card">
           <h3>Vintage: The Space Age design language</h3>
-          <p>A look at 60s/70s NASA posters, typography and how the era still influences aerospace aesthetics. <a href="#">Read more →</a></p>
+          <p>A look at 60s/70s NASA posters, typography and how the era still influences aerospace aesthetics.</p>
+          <div class="post-meta muted">— coming soon —</div>
         </article>
-      </section>
+      </div>
+    </section>
 
-      <section class="retro">
-        <div class="left">
-          <h2>Space Age Insights</h2>
-          <p>From Saturn V to modern launch vehicles — design, engineering, and the human stories behind the machines. Expect short features that mix history with hands-on engineering thinking.</p>
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+      <div class="about-wrap">
+        <div class="about-img">
+          <!-- About image (make sure the file about-math.jpg exists in your repo) -->
+          <img src="https://raw.githubusercontent.com/catarinapradolimabraga-bot/Skyward-She/main/about-math.jpg" alt="Study board">
         </div>
-        <div class="right muted">
-          <div>Subscribe for updates (email coming soon)</div>
-        </div>
-      </section>
-
-      <section class="two-col">
-        <div class="about" id="about">
+        <div class="about-text">
           <h2>About Catarina</h2>
-          <img src="https://github.com/catarinapradolimabraga-bot/Skyward-She/blob/main/about-math.jpg?raw=true" alt="Catarina profile placeholder">
-          <p class="muted">I am a 9th grade student from Brazil, passionate about aerospace engineering, STEM education and building pathways for girls to join research. I participate in science olympiads and local engineering projects.</p>
-          <p>Goal: inspire girls to start research early and show how aerospace engineering is accessible to students with curiosity and persistence.</p>
+          <p>Catarina is a 14-year-old aspiring aerospace engineer from Porto Velho, a city in the northern Brazilian state of Rondônia. Born on November 27, she is passionate about physics, aerospace engineering, and the future of space exploration.</p>
+
+          <p>She discovered her love for STEM through school projects, research, and science olympiads. Every challenge — from studying flight mechanics to writing about women in aerospace — brings her closer to the future she dreams of building.</p>
+
+          <p>Through <strong>Skyward She</strong>, Catarina hopes to inspire other girls, especially those from places where STEM opportunities feel far away, to believe that curiosity and ambition can take them anywhere — even to the stars.</p>
         </div>
+      </div>
+    </section>
 
-        <aside class="contact" id="contact">
-          <h3>Contact</h3>
-          <p class="small muted">Want to collaborate, share a story, or suggest a topic? Send a quick message.</p>
-          <!-- FORM: To make the contact form work, sign up for Formspree (https://formspree.io/) and replace the action attribute below with your Formspree endpoint. -->
-          <form action="https://formspree.io/f/xpwgznoe" method="POST">
-            <label>Name</label>
-            <input type="text" name="name" required placeholder="Your name">
-            <label>Email</label>
-            <input type="email" name="email" required placeholder="you@example.com">
-            <label>Message</label>
-            <textarea name="message" rows="4" required placeholder="Write a short message..."></textarea>
-            <button type="submit">Send</button>
-            <p class="muted" style="font-size:12px;margin-top:8px">Or email directly: <a href="mailto:catarinapradolimabraga@gmail.com">catarinapradolimabraga@gmail.com</a></p>
-          </form>
-        </aside>
-      </section>
+    <!-- CONTACT (Formspree integrated) -->
+    <section id="contact" class="contact-wrap">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- left: contact info -->
+          <div style="flex:1;min-width:260px;">
+            <div style="margin-bottom:12px;">
+              <h3 style="margin:0;font-family:'Bebas Neue',sans-serif;color:var(--accent);font-size:20px;">Contact</h3>
+            </div>
+            <p class="muted">Want to collaborate, share a story, or suggest a topic? Send a quick message below or email directly.</p>
 
-      <footer>
-        <div>© Skyward She • Built with care by Catarina</div>
-      </footer>
-    </main>
-  </div>
+            <p style="margin-top:12px;"><strong>Email:</strong>
+              <a href="mailto:7116@colegioclassea.com.br">7116@colegioclassea.com.br</a>
+            </p>
 
-  <!-- Helpful JS: small script to insert new posts from a simple JSON file (posts.json) if you choose to maintain it in the repo -->
-  <script>
-    /*
-      Instructions:
-      - If you add a file posts.json to your repo (same folder) with an array of posts, this script will dynamically render them into the #articles grid.
-      - Format example (posts.json):
-        [{"title":"Post 1","excerpt":"Short text","url":"/posts/post1.html"}, ...]
-    */
-    async function loadPosts(){
-      try{
-        const res = await fetch('posts.json');
-        if(!res.ok) return;
-        const posts = await res.json();
-        const grid = document.querySelector('#articles');
-        grid.innerHTML = '';
-        posts.slice(0,6).forEach(p=>{
-          const art = document.createElement('article'); art.className='card';
-          art.innerHTML = `<h3>${p.title}</h3><p>${p.excerpt} <a href='${p.url}'>Read more →</a></p>`;
-          grid.appendChild(art);
-        })
-      }catch(e){console.log('no posts.json or fetch error', e)}
-    }
-    loadPosts();
-  </script>
+            <p class="muted" style="margin-top:14px;font-size:13px;">Note: after your first test message Formspree may ask you to verify the email linked to your Formspree account.</p>
+          </div>
+
+          <!-- right: form -->
+          <div style="flex:1;min-width:320px;max-width:540px;">
+            <form class="contact-card" action="https://formspree.io/f/xqavnaaw" method="POST" accept-charset="utf-8">
+              <input type="hidden" name="_subject" value="Skyward She contact form submission">
+              <label style="display:block;margin-bottom:10px;">
+                <strong style="display:block;margin-bottom:6px;color:#1d2a3a;">Name</strong>
+                <input type="text" name="name" required style="width:100%;padding:10px;border:1px solid #e0e6ea;border-radius:8px;">
+              </label>
+
+              <label style="display:block;margin-bottom:10px;">
+                <strong style="display:block;margin-bottom:6px;color:#1d2a3a;">Email</strong>
+                <input type="email" name="email" required style="width:100%;padding:10px;border:1px solid #e0e6ea;border-radius:8px;">
+              </label>
+
+              <label style="display:block;margin-bottom:12px;">
+                <strong style="display:block;margin-bottom:6px;color:#1d2a3a;">Message</strong>
+                <textarea name="message" rows="5" required style="width:100%;padding:10px;border:1px solid #e0e6ea;border-radius:8px;"></textarea>
+              </label>
+
+              <div style="display:flex;gap:10px;align-items:center;">
+                <button type="submit" style="background:var(--accent);color:#fff;padding:10px 14px;border:none;border-radius:8px;cursor:pointer;font-weight:600;">Send</button>
+                <span style="color:#9aa4b2;font-size:13px;">We'll reply to the email you provide.</span>
+              </div>
+
+              <!-- anti-spam honeypot -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">© Skyward She — Catarina • Porto Velho, Rondônia</div>
+  </main>
+
 </body>
 </html>
