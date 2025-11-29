@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aerospace 101 — Skyward She</title>
+  <meta name="description" content="Aerospace 101: simple explanations about rockets, orbits, flight forces, satellites and how to start small projects.">
+
+  <!-- Fonts (same as your site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#F7F8FA; --card:#fff; --accent:#0A4C8A; --muted:#6D7480; --maxw:900px; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:0;background:var(--bg);font-family:'Poppins',Arial,sans-serif;color:#1d2a3a;}
+    .container{max-width:var(--maxw);margin:28px auto;padding:0 16px;}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{font-family:'Bebas Neue',sans-serif;color:var(--accent);font-size:22px}
+    .breadcrumb{font-size:13px;color:#9aa4b2}
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 10px 24px rgba(12,30,60,0.05)}
+    h1{font-family:'Bebas Neue',sans-serif;color:var(--accent);font-size:34px;margin:0 0 6px}
+    .intro{color:var(--muted);line-height:1.6;margin-bottom:18px}
+    h2{font-family:'Bebas Neue',sans-serif;color:#0A4C8A;margin-top:20px;margin-bottom:8px;font-size:20px}
+    p{color:var(--muted);line-height:1.6}
+    ul{color:var(--muted);margin-left:18px}
+    .back{display:inline-block;margin-top:18px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:9px;text-decoration:none;font-weight:600}
+    .topics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .topic-card{background:var(--card);padding:12px;border-radius:10px;border:1px solid #eef2f5}
+    .topic-card h4{margin:0 0 6px;font-size:16px;color:#0f3f65}
+    .more-articles{margin-top:26px}
+    .article-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:10px}
+    .article-card{background:var(--card);padding:12px;border-radius:10px;border:1px solid #eef2f5}
+    .article-card h5{margin:0 0 6px;font-size:15px}
+    footer{margin:28px 0 60px;color:#98a3ad;font-size:13px;text-align:center}
+    @media(max-width:640px){h1{font-size:30px}}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div>
+        <div class="brand">Skyward She</div>
+        <div class="breadcrumb">Aerospace 101</div>
+      </div>
+      <div style="text-align:right">
+        <a href="index.html" class="back" style="background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 10px;border-radius:8px;font-weight:600">Home</a>
+      </div>
+    </header>
+
+    <main class="card">
+      <h1>Aerospace 101</h1>
+      <p class="intro">A short, friendly introduction to basic aerospace concepts — perfect if you're starting out. Below you'll find simple explanations and quick links to deeper articles.</p>
+
+      <!-- BASIC TOPICS -->
+      <section>
+        <h2>Quick basics</h2>
+        <div class="topics-grid">
+          <div class="topic-card">
+            <h4>How rockets work</h4>
+            <p>Rockets push themselves by throwing mass out the back very quickly (Newton's third law). Engines burn fuel to create high-speed exhaust that produces thrust.</p>
+          </div>
+
+          <div class="topic-card">
+            <h4>What is an orbit?</h4>
+            <p>An orbit is when an object moves sideways fast enough that it keeps “falling” around a planet instead of landing — gravity pulls it in, its forward speed keeps it circling.</p>
+          </div>
+
+          <div class="topic-card">
+            <h4>Forces of flight</h4>
+            <p>Lift, weight, thrust and drag are the four forces pilots and engineers balance when designing airplanes and spacecraft during atmospheric flight.</p>
+          </div>
+
+          <div class="topic-card">
+            <h4>Satellites & telemetry</h4>
+            <p>Satellites carry instruments and send data back to Earth (telemetry). They help us in communication, weather, navigation and science.</p>
+          </div>
+
+          <div class="topic-card">
+            <h4>Reentry & heat</h4>
+            <p>When spacecraft return from orbit they hit air at high speed and heat up. Special heat shields protect them by absorbing and shedding heat.</p>
+          </div>
+
+          <div class="topic-card">
+            <h4>How to start small</h4>
+            <p>Try simple projects: model rockets, build a balloon payload, track satellites with an app, or design experiments for school science fairs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEEPER ARTICLES / LINKS -->
+      <section class="more-articles">
+        <h2>Read more — deeper articles</h2>
+        <p class="intro">These are suggested follow-up articles you can publish as separate pages. Click to open when they're ready.</p>
+
+        <div class="article-cards">
+          <div class="article-card">
+            <h5><a href="aerospace/rockets.html">How rockets work — detailed</a></h5>
+            <p>A deeper look at propulsion, specific impulse, staging and fuel types.</p>
+          </div>
+
+          <div class="article-card">
+            <h5><a href="aerospace/orbits.html">Orbits explained</a></h5>
+            <p>Types of orbits, orbital speed, transfer maneuvers and why geostationary works.</p>
+          </div>
+
+          <div class="article-card">
+            <h5><a href="aerospace/flight-forces.html">Lift, drag & flight stability</a></h5>
+            <p>Aerodynamics basics, wing shapes and how pilots keep an aircraft stable.</p>
+          </div>
+
+          <div class="article-card">
+            <h5><a href="aerospace/satellites.html">Satellites & telemetry</a></h5>
+            <p>Payloads, ground stations, orbits and how data gets from space to your phone.</p>
+          </div>
+        </div>
+      </section>
+
+      <a class="back" href="index.html">← Back to Home</a>
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+
+</body>
+</html>
