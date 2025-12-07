@@ -1,1 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rocket engines — combustion, nozzles & efficiency</title>
+  <meta name="description" content="Detailed explanation of rocket engines, combustion physics, nozzle design and specific impulse. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA; --card:#ffffff; --accent:#0A4C8A; --muted:#6D7480; 
+      --maxw:900px; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      padding:28px;
+      background:var(--bg);
+      font-family:'Poppins',Arial,sans-serif;
+      color:#1d2a3a;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 24px rgba(12,30,60,0.05)
+    }
+    h1{
+      font-family:'Bebas Neue',sans-serif;
+      color:var(--accent);
+      font-size:36px;
+      margin:0 0 8px;
+    }
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:16px}
+    h2{
+      font-family:'Bebas Neue',sans-serif;
+      color:#0A4C8A;
+      margin-top:20px;
+      margin-bottom:8px;
+      font-size:22px;
+    }
+    h3{color:#0f3f65;margin-top:14px}
+    p{color:var(--muted);line-height:1.7}
+    ul{color:var(--muted);margin-left:20px}
+    .refs{color:var(--muted);font-size:14px;line-height:1.6;margin-top:10px}
+    .back{
+      display:inline-block;
+      margin-top:26px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:9px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer{text-align:center;margin-top:40px;color:#9aa4b2;font-size:13px}
+    @media(max-width:640px){h1{font-size:30px}}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+
+      <h1>Rocket engines — combustion, nozzles & efficiency</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p class="lead">
+        Rocket engines are among the most powerful machines ever developed. Unlike air-breathing engines,
+        rockets carry both fuel and oxidizer, allowing them to operate in the vacuum of space. Their design
+        combines fluid dynamics, thermodynamics, combustion chemistry and advanced materials to convert
+        stored chemical energy into high-velocity exhaust and thrust.
+      </p>
+
+      <h2>1. The physics of thrust</h2>
+      <p>
+        Rockets operate according to <strong>Newton’s Third Law</strong>: when propellant is expelled backward,
+        the rocket accelerates forward. The basic thrust equation is:
+      </p>
+      <p><em>Thrust = mass flow rate × exhaust velocity</em></p>
+      <p>
+        Engineers increase thrust by optimizing propellant flow rate (ṁ) and exhaust velocity (Ve).
+      </p>
+
+      <h2>2. Combustion chamber</h2>
+      <p>
+        The combustion chamber mixes fuel and oxidizer and burns them at extreme temperatures—often above
+        3,000 K. The chamber must maintain high pressure and withstand thermal loads as it feeds hot gas
+        into the nozzle.
+      </p>
+
+      <h3>Common propellant types</h3>
+      <ul>
+        <li><strong>Liquid engines:</strong> RP-1/LOX, LH₂/LOX, hypergolics (MMH + N₂O₄)</li>
+        <li><strong>Solid engines:</strong> fuel and oxidizer mixed into a single grain</li>
+        <li><strong>Hybrid engines:</strong> liquid oxidizer + solid fuel</li>
+      </ul>
+
+      <p>
+        Higher chamber pressure typically improves performance by increasing exhaust velocity.
+      </p>
+
+      <h2>3. Nozzles: converting heat into momentum</h2>
+      <p>
+        Most rocket engines use a <strong>de Laval nozzle</strong> with a converging section, throat and diverging
+        section. Gas reaches Mach 1 at the throat and expands supersonically through the diverging area,
+        gaining velocity and producing thrust.
+      </p>
+
+      <p>
+        Nozzle length and expansion ratio depend on the operating environment:
+      </p>
+      <ul>
+        <li><strong>Sea-level nozzles:</strong> shorter, optimized for higher ambient pressure</li>
+        <li><strong>Vacuum nozzles:</strong> longer, wider, optimized for low pressure</li>
+      </ul>
+
+      <h2>4. Efficiency: specific impulse (Isp)</h2>
+      <p>
+        Specific impulse is the key measure of rocket efficiency:
+      </p>
+      <p><em>Isp = thrust produced per unit of propellant consumption</em></p>
+      <p>
+        Higher Isp means the engine gets more thrust from less propellant.
+      </p>
+
+      <h3>Typical Isp values</h3>
+      <ul>
+        <li>Solid boosters: ~250 s</li>
+        <li>RP-1/LOX engines: 300–330 s</li>
+        <li>LH₂/LOX engines: 430–465 s</li>
+        <li>Ion engines: 3,000+ s</li>
+      </ul>
+
+      <h2>5. Engine cycles</h2>
+
+      <h3>Gas-generator cycle</h3>
+      <p>
+        Burns a small amount of propellant in a separate chamber to drive the turbopump. Simple but
+        less efficient. Used in Merlin engines.
+      </p>
+
+      <h3>Staged-combustion cycle</h3>
+      <p>
+        A preburner produces hot gas to drive the turbine, and the exhaust is fed into the main chamber.
+        Extremely efficient and high pressure. Used in Raptor, RD-180, RS-25.
+      </p>
+
+      <h3>Pressure-fed systems</h3>
+      <p>
+        Tanks are pressurized with inert gas instead of using turbopumps. Reliable and simple; used in
+        spacecraft maneuvering thrusters.
+      </p>
+
+      <h2>6. Cooling and materials</h2>
+      <p>
+        Rocket engines withstand some of the harshest thermal environments in engineering.
+        Techniques include:
+      </p>
+      <ul>
+        <li>Regenerative cooling</li>
+        <li>Ablative cooling</li>
+        <li>Transpiration cooling</li>
+        <li>High-temperature alloys (Inconel, niobium, rhenium)</li>
+      </ul>
+
+      <h2>References</h2>
+      <div class="refs">
+        <p><strong>NASA Marshall Space Flight Center.</strong><br>
+        “Rocket Propulsion Basics.” https://www.nasa.gov</p>
+
+        <p><strong>Sutton, George P., and Biblarz, Oscar.</strong><br>
+        <em>Rocket Propulsion Elements.</em> Wiley, 2016.</p>
+
+        <p><strong>SpaceX Merlin and Raptor engine documentation.</strong></p>
+
+        <p><strong>ESA — European Space Agency.</strong><br>
+        “Propulsion Systems.”</p>
+
+        <p><strong>Wertz & Larson.</strong><br>
+        <em>Space Mission Analysis and Design.</em></p>
+      </div>
+
+      <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+</body>
+</html>
