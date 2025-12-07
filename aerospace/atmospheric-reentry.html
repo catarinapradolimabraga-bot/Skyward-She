@@ -1,1 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Atmospheric reentry — heating, plasma & shielding</title>
+  <meta name="description" content="A detailed guide on reentry heating, plasma formation and thermal protection systems. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA;
+      --card:#ffffff;
+      --accent:#0A4C8A;
+      --muted:#6D7480;
+      --maxw:900px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      padding:28px;
+      background:var(--bg);
+      font-family:'Poppins',Arial,sans-serif;
+      color:#1d2a3a;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 24px rgba(12,30,60,0.05);
+    }
+    h1{
+      font-family:'Bebas Neue',sans-serif;
+      color:var(--accent);
+      font-size:36px;
+      margin:0 0 8px;
+    }
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:16px}
+    h2{
+      font-family:'Bebas Neue',sans-serif;
+      color:#0A4C8A;
+      margin-top:20px;
+      margin-bottom:8px;
+      font-size:22px;
+    }
+    h3{color:#0f3f65;margin-top:14px}
+    p{color:var(--muted);line-height:1.7}
+    ul{color:var(--muted);margin-left:20px}
+    .refs{color:var(--muted);font-size:14px;line-height:1.6;margin-top:12px}
+    .back{
+      display:inline-block;
+      margin-top:26px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:9px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer{text-align:center;margin-top:40px;color:#9aa4b2;font-size:13px}
+    @media(max-width:640px){h1{font-size:30px}}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+
+      <h1>Atmospheric reentry — heating, plasma & shielding</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p class="lead">
+        Atmospheric reentry is one of the most extreme phases of any space mission. Returning spacecraft face intense
+        heating, plasma formation, shock waves and high g-loads. Understanding how heat is generated and how thermal
+        protection systems work is essential for designing capsules, probes and reusable vehicles.
+      </p>
+
+      <h2>1. Why spacecraft heat up during reentry</h2>
+      <p>
+        Spacecraft do not heat primarily due to friction. The dominant mechanism is compression heating: as the vehicle
+        travels at hypersonic speed, it compresses atmospheric gases in front of it. According to thermodynamic laws,
+        compressing a gas raises its temperature, generating a superheated shock layer that can exceed 5,000–10,000 K.
+      </p>
+      <p>
+        These temperatures are high enough to ionize air molecules, forming a plasma sheath around the vehicle — hot,
+        electrically charged gas that radiates heat toward the spacecraft surface.
+      </p>
+
+      <h2>2. Plasma formation and communications blackout</h2>
+      <p>
+        The ionized gas surrounding the spacecraft absorbs radio waves, causing a temporary loss of communications.
+        Apollo missions experienced a 3–4 minute blackout; modern capsules such as SpaceX Dragon and Soyuz experience
+        similar effects during peak heating.
+      </p>
+      <p>
+        As the plasma cools, radio transparency returns and communication is restored.
+      </p>
+
+      <h2>3. Deceleration loads and g-forces</h2>
+      <p>
+        Reentry slows spacecraft extremely quickly, producing significant g-forces:
+      </p>
+      <ul>
+        <li>Apollo: 6–7 g</li>
+        <li>Soyuz: up to 8–9 g</li>
+        <li>SpaceX Crew Dragon: ~4–5 g</li>
+        <li>Space Shuttle: ~1.5 g (thanks to aerodynamic lift)</li>
+      </ul>
+      <p>
+        Capsules follow steep, ballistic trajectories, while lifting vehicles spread heating over a longer path,
+        reducing peak deceleration.
+      </p>
+
+      <h2>4. Thermal Protection Systems (TPS)</h2>
+      <p>There are several TPS approaches, each suited to different mission types:</p>
+
+      <h3>Ablative Shielding</h3>
+      <p>
+        Used in Apollo, Orion and sample-return missions. Material chars, melts and vaporizes, carrying heat away
+        with the ablated mass. Examples include AVCOAT and PICA/PICA-X.
+      </p>
+
+      <h3>Reusable Insulation</h3>
+      <p>
+        Silica tiles and composite materials endure high temperatures while remaining lightweight. Used by the
+        Space Shuttle and emerging reusable spacecraft.
+      </p>
+
+      <h3>Metallic Heat Shields</h3>
+      <p>
+        Made of high-temperature metals such as Inconel or titanium alloys. Used in lifting-body vehicles like Dream Chaser.
+      </p>
+
+      <h3>Transpiration Cooling</h3>
+      <p>
+        Experimental method where coolant is pushed through porous surfaces to cool the structure from within.
+      </p>
+
+      <h2>5. Designing reentry trajectories</h2>
+      <p>Key parameters include:</p>
+
+      <h3>Flight Path Angle</h3>
+      <p>
+        Too steep: extreme heating and g-loads.  
+        Too shallow: risk of skipping off the atmosphere.
+      </p>
+
+      <h3>Bank Angle Modulation</h3>
+      <p>
+        Lifting vehicles roll to control lift, drag and descent rate — used by the Space Shuttle and SpaceX Starship.
+      </p>
+
+      <h3>Drag Profile</h3>
+      <p>
+        Capsules rely mainly on drag; lifting vehicles use a mix of drag and controlled lift.
+      </p>
+
+      <h2>6. Types of reentry</h2>
+
+      <h3>Suborbital (< 3 km/s)</h3>
+      <p>Lower heating; used by vehicles like Blue Origin's New Shepard.</p>
+
+      <h3>Orbital (~7–8 km/s)</h3>
+      <p>Typical for ISS return missions and reusable vehicles.</p>
+
+      <h3>Lunar or interplanetary (11–13 km/s)</h3>
+      <p>
+        The most demanding type. NASA’s Stardust probe reached 12.9 km/s — the fastest Earth reentry ever recorded.
+      </p>
+
+      <h2>References</h2>
+      <div class="refs">
+        <p><strong>NASA Ames Research Center.</strong> “Thermal Protection Systems.”</p>
+        <p><strong>NASA Glenn Research Center.</strong> “Hypersonic Aerodynamics and Heating.”</p>
+        <p><strong>ESA — European Space Agency.</strong> “Reentry and Aerothermal Modeling.”</p>
+        <p><strong>Regan & Anadakrishnan.</strong> <em>Dynamics of Atmospheric Re-Entry.</em></p>
+        <p><strong>SpaceX Engineering Documentation.</strong> Materials on PICA-X heat shields.</p>
+      </div>
+
+      <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+</body>
+</html>
