@@ -1,1 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lift, drag & flight stability — Skyward She</title>
+  <meta name="description" content="Detailed explanation of lift, drag and aircraft stability: airfoils, drag types, control surfaces and stability axes. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA; --card:#ffffff; --accent:#0A4C8A; --muted:#6D7480; --maxw:900px; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:28px;background:var(--bg);font-family:'Poppins',Arial,sans-serif;color:#1d2a3a;}
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 10px 24px rgba(12,30,60,0.05)}
+    h1{font-family:'Bebas Neue',sans-serif;color:var(--accent);font-size:36px;margin:0 0 8px}
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:16px}
+    h2{font-family:'Bebas Neue',sans-serif;color:#0A4C8A;margin-top:20px;margin-bottom:8px;font-size:20px}
+    h3{color:#0f3f65;margin-top:14px}
+    p{color:var(--muted);line-height:1.7}
+    ul{color:var(--muted);margin-left:20px}
+    code{background:#f1f3f6;padding:3px 6px;border-radius:6px;font-size:13px}
+    .back{display:inline-block;margin-top:24px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:9px;text-decoration:none;font-weight:600}
+    .refs{color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px}
+    footer{text-align:center;margin-top:40px;color:#9aa4b2;font-size:13px}
+    @media(max-width:640px){h1{font-size:30px}}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+      <h1>Lift, drag & flight stability</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p class="lead">
+        Flight is the result of a carefully managed balance between forces and geometry. This article explains how wings generate lift,
+        how different forms of drag limit performance, and how designers make aircraft stable and controllable through shape and control surfaces.
+      </p>
+
+      <h2>1. How lift is created — combining physics and airflow</h2>
+      <p>
+        Lift acts perpendicular to the relative airflow and appears because of the wing’s shape and angle relative to the flow.
+        Two complementary explanations are useful:
+      </p>
+      <ul>
+        <li><strong>Newtonian view:</strong> the wing deflects air downward; by reaction the wing is pushed upward. Angle of attack (AoA) controls the amount of deflection and therefore the produced lift.</li>
+        <li><strong>Pressure/Bernoulli view:</strong> airflow accelerates over the cambered upper surface, lowering pressure there relative to the underside and contributing to net upward force.</li>
+      </ul>
+      <p>
+        Designers choose airfoil thickness, camber and planform based on mission: thin, low-drag profiles for high-speed aircraft; thicker, cambered sections for high lift at low speed and short-field operations.
+      </p>
+
+      <h2>2. Types of drag and their trade-offs</h2>
+      <p>
+        Drag opposes motion and appears in several forms that dominate at different speeds:
+      </p>
+      <h3>Parasite (form) drag</h3>
+      <p>
+        Caused by shape and surface friction: fuselage, gear, antennas and surface roughness. Parasite drag rises roughly with the square of speed and dominates at high speeds.
+      </p>
+
+      <h3>Induced drag</h3>
+      <p>
+        A byproduct of lift generation: wingtip vortices tilt the lift vector rearwards, producing induced drag. Induced drag is significant at low speeds and high lift coefficients — critical during takeoff and landing.
+      </p>
+
+      <h3>Wave drag</h3>
+      <p>
+        Arises near transonic and supersonic speeds due to shock formation and associated losses. Wave drag shapes wing design for high-speed aircraft.
+      </p>
+
+      <p>
+        The combined behavior leads to a curve with a minimum total drag at a particular speed — the key performance point used in range and endurance planning.
+      </p>
+
+      <h2>3. Stability: what keeps an aircraft predictable</h2>
+      <p>
+        Stability is the aircraft’s natural tendency to return to a steady state after a disturbance. There are three axes of stability:
+      </p>
+      <ul>
+        <li><strong>Longitudinal (pitch):</strong> depends on center of gravity location, tailplane size and incidence. A slightly nose-heavy configuration typically increases pitch stability.</li>
+        <li><strong>Lateral (roll):</strong> influenced by dihedral, wing sweep and high/low wing placement; these features help self-right the aircraft after rolling perturbations.</li>
+        <li><strong>Directional (yaw):</strong> provided by the vertical stabilizer; it damps yaw oscillations and keeps the nose aligned with the airflow.</li>
+      </ul>
+      <p>
+        Designers balance static stability (the initial tendency) with dynamic stability and control authority — too much static stability can make an aircraft sluggish, while too little can make it unsafe.
+      </p>
+
+      <h2>4. Control surfaces and handling</h2>
+      <p>
+        Control surfaces translate pilot (or autopilot) inputs into aerodynamic moments:
+      </p>
+      <ul>
+        <li><strong>Ailerons</strong> change roll by altering lift at the wing tips.</li>
+        <li><strong>Elevator</strong> controls pitch by changing tailplane lift or by moving a stabilator.</li>
+        <li><strong>Rudder</strong> controls yaw, used for coordinated turns and crosswind handling.</li>
+      </ul>
+      <p>
+        Their effectiveness varies with airspeed and flow quality; modern aircraft use mixes, differential deflection and sometimes fly-by-wire laws to ensure consistent, safe handling throughout the flight envelope.
+      </p>
+
+      <h2>5. Practical considerations for designers and pilots</h2>
+      <p>
+        Stability and aerodynamic efficiency affect fuel consumption, payload and safety. Small changes in wing twist, taper, or tail size can have large effects on handling and drag.
+        Pilots train for stalls, control reversal, and low-speed handling because these regimes are where induced drag and loss of control become critical.
+      </p>
+
+      <h2>References</h2>
+      <div class="refs">
+        <p><strong>Anderson, John D.</strong><br>
+        <em>Fundamentals of Aerodynamics</em>. McGraw-Hill Education, 2017.</p>
+
+        <p><strong>NASA Glenn Research Center.</strong><br>
+        “Lift, Drag and Aerodynamics Basics.” https://www.grc.nasa.gov/</p>
+
+        <p><strong>NASA — Beginner’s Guide to Aeronautics.</strong><br>
+        “Stability and Control.” https://www.grc.nasa.gov/www/k-12/airplane/</p>
+
+        <p><strong>FAA.</strong><br>
+        <em>Pilot’s Handbook of Aeronautical Knowledge</em>. FAA-H-8083-25B, 2016.</p>
+
+        <p><strong>Kern, Christopher W.</strong><br>
+        <em>Flight Stability and Automatic Control</em>. McGraw-Hill, 1999.</p>
+
+        <p><strong>Raymer, Daniel P.</strong><br>
+        <em>Aircraft Design: A Conceptual Approach</em>. AIAA, 2012.</p>
+      </div>
+
+      <div style="margin-top:26px;">
+        <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+      </div>
+
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+</body>
+</html>
