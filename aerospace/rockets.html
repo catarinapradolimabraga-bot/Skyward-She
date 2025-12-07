@@ -1,1 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How rockets work — detailed — Skyward She</title>
+  <meta name="description" content="A detailed, elegant and technically grounded explanation of how rocket propulsion works. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA; --card:#ffffff; --accent:#0A4C8A; --muted:#6D7480; --maxw:900px; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:28px;background:var(--bg);font-family:'Poppins',Arial,sans-serif;color:#1d2a3a;}
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 10px 24px rgba(12,30,60,0.05)}
+    h1{font-family:'Bebas Neue',sans-serif;color:var(--accent);font-size:36px;margin:0 0 8px}
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    p{color:var(--muted);line-height:1.7;margin-bottom:14px}
+    h2{font-family:'Bebas Neue',sans-serif;color:#0A4C8A;margin-top:26px;margin-bottom:8px;font-size:22px}
+    ul{color:var(--muted);margin-left:20px}
+    code{background:#f1f3f6;padding:3px 6px;border-radius:6px;font-size:13px}
+    .back{display:inline-block;margin-top:24px;background:transparent;color:var(--accent);padding:10px 14px;border-radius:9px;text-decoration:none;border:2px solid var(--accent);font-weight:600}
+    footer{text-align:center;margin-top:40px;color:#9aa4b2;font-size:13px}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+      <h1>How rockets work — detailed</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p>
+        Rocket propulsion is one of the most elegant demonstrations of physics in motion.  
+        From Newton’s laws to Tsiolkovsky’s equation, every launch is a blend of chemistry, thermodynamics, 
+        structural engineering, and trajectory design. This article breaks down the essential principles behind
+        how modern rockets generate thrust and reach orbit.
+      </p>
+
+      <h2>1. Newton’s Third Law: the foundation</h2>
+      <p>
+        The entire concept of rocket propulsion comes from Newton’s Third Law:  
+        <em>“For every action, there is an equal and opposite reaction.”</em>  
+        A rocket accelerates by expelling mass backward at extremely high velocity.  
+        In space, where there is no air to push against, this principle becomes even clearer —
+        the rocket pushes only on its own exhaust.
+      </p>
+
+      <h2>2. Combustion: creating energy and pressure</h2>
+      <p>
+        Inside the combustion chamber, fuel and oxidizer react violently, producing hot, high-pressure gases.
+        The chamber is engineered to withstand extreme temperatures and maintain stable burning, while its pressure
+        forces the gases outward through the nozzle.
+      </p>
+
+      <h2>3. Nozzle design: turning pressure into velocity</h2>
+      <p>
+        Most rockets use a <strong>de Laval nozzle</strong>, a convergent–divergent shape that accelerates gases 
+        to supersonic speeds.  
+        At the throat, the gas reaches Mach 1.  
+        As it expands into the diverging section, it accelerates even further, creating the high-velocity exhaust jet
+        responsible for thrust.
+      </p>
+
+      <h2>4. Specific impulse: measuring efficiency</h2>
+      <p>
+        <strong>Specific impulse (Isp)</strong> tells us how effectively a rocket uses its propellant.  
+        Higher Isp means more velocity for the same amount of fuel. Examples:
+      </p>
+      <ul>
+        <li>~450 s — liquid hydrogen + liquid oxygen (very efficient, used in upper stages)</li>
+        <li>~300 s — RP-1 kerosene + LOX (common in first stages)</li>
+        <li>~200–260 s — solid propellants</li>
+      </ul>
+
+      <h2>5. Tsiolkovsky’s rocket equation & staging</h2>
+      <p>
+        The famous equation:
+      </p>
+      <p><code>Δv = vₑ · ln(m₀ / m_f)</code></p>
+      <p>
+        shows why multi-stage rockets are essential.  
+        To achieve orbital velocity, a vehicle must shed empty mass along the way.
+        Each discarded stage increases the efficiency of the remaining vehicle.
+      </p>
+
+      <h2>6. The gravity turn</h2>
+      <p>
+        Rockets do not go “straight up.”  
+        After clearing the atmosphere, they gradually tilt to begin accelerating horizontally —  
+        a maneuver called a <strong>gravity turn</strong>.  
+        For low Earth orbit, the required horizontal velocity is about <strong>7.8 km/s</strong>.
+      </p>
+
+      <h2>7. Propellant choices</h2>
+      <p>
+        Each propellant family offers different advantages:
+      </p>
+      <ul>
+        <li>Liquid hydrogen — very high Isp, very low density</li>
+        <li>RP-1 kerosene — excellent density, easier storage</li>
+        <li>Solids — simple, reliable, but cannot be throttled</li>
+      </ul>
+
+      <h2>8. Real-world constraints</h2>
+      <p>
+        Engineering a rocket means balancing structure, heat protection, engine stresses, guidance systems,
+        and mass constraints — all while ensuring reliability.  
+        Even minor improvements in mass fraction or nozzle efficiency can dramatically improve performance.
+      </p>
+
+      <h2>References</h2>
+      <p style="color:#6D7480;font-size:14px">
+        Newton, I. — <em>Philosophiæ Naturalis Principia Mathematica</em> (1687)<br>
+        Tsiolkovsky, K. — “The Exploration of Cosmic Space by Means of Reaction Devices” (1903)<br>
+        Sutton & Biblarz — <em>Rocket Propulsion Elements</em>, 9th edition
+      </p>
+
+      <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+</body>
+</html>
