@@ -1,1 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orbits Explained — Skyward She</title>
+  <meta name="description" content="A detailed explanation of orbital mechanics, velocity, gravity and transfer maneuvers. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA; --card:#ffffff; --accent:#0A4C8A; --muted:#6D7480; --maxw:900px; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:28px;background:var(--bg);font-family:'Poppins',Arial,sans-serif;color:#1d2a3a;}
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 10px 24px rgba(12,30,60,0.05)}
+    h1{font-family:'Bebas Neue',sans-serif;color:var(--accent);font-size:36px;margin:0 0 8px}
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    p{color:var(--muted);line-height:1.7;margin-bottom:14px}
+    h2{font-family:'Bebas Neue',sans-serif;color:#0A4C8A;margin-top:26px;margin-bottom:8px;font-size:22px}
+    ul{color:var(--muted);margin-left:20px}
+    code{background:#f1f3f6;padding:3px 6px;border-radius:6px;font-size:13px}
+    .back{display:inline-block;margin-top:24px;background:transparent;color:var(--accent);padding:10px 14px;border-radius:9px;text-decoration:none;border:2px solid var(--accent);font-weight:600}
+    footer{text-align:center;margin-top:40px;color:#9aa4b2;font-size:13px}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+      <h1>Orbits Explained</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p>
+        Orbital mechanics is one of the most refined areas of aerospace engineering — a discipline where elegance,
+        mathematics, and precision come together. Understanding how orbits work means understanding gravity, velocity,
+        energy, and the subtle geometry that defines spacecraft trajectories.
+      </p>
+
+      <h2>1. Gravity as a constant pull</h2>
+      <p>
+        A spacecraft in orbit is not floating — it is constantly falling toward Earth while moving sideways fast enough
+        that it never reaches the surface. Newton’s cannonball analogy describes this perfectly: with the right
+        horizontal velocity, the planet curves away beneath the object at the same rate it falls.
+      </p>
+
+      <h2>2. Circular and elliptical orbits</h2>
+      <p>
+        Kepler showed that orbits follow ellipses, with the central body at one focus. Circular orbits maintain constant
+        altitude, while elliptical orbits vary between perigee (closest point) and apogee (farthest point).
+      </p>
+      <p>
+        In Low Earth Orbit (LEO), spacecraft travel around <strong>7.8 km/s</strong>, completing a full revolution in
+        about 90 minutes.
+      </p>
+
+      <h2>3. Orbital energy: bound and unbound motion</h2>
+      <p>
+        Engineers describe orbits using total mechanical energy.  
+        If energy is negative → the spacecraft is bound to Earth.  
+        If it reaches zero or positive → it escapes.
+      </p>
+      <p>
+        Escape velocity at Earth’s surface is approximately <strong>11.2 km/s</strong>, representing the energy needed to
+        break free of the planet’s gravitational well.
+      </p>
+
+      <h2>4. Orbital velocity and altitude</h2>
+      <p>
+        Lower orbits require higher speeds; higher orbits require lower speeds.  
+        This is why the International Space Station orbits rapidly, while geostationary satellites take 24 hours to
+        complete one revolution.
+      </p>
+
+      <h2>5. Orbital maneuvers</h2>
+      <p>
+        To change an orbit, spacecraft perform velocity changes known as <strong>Δv (delta-v)</strong>.  
+        The most efficient maneuver is the <strong>Hohmann transfer</strong>, a two-burn technique for moving between
+        circular orbits.
+      </p>
+      <ul>
+        <li>Bi-elliptic transfers</li>
+        <li>Plane changes</li>
+        <li>Gravity assists</li>
+      </ul>
+
+      <h2>6. Perturbations</h2>
+      <p>
+        Real orbits drift due to Earth’s uneven gravity field, atmospheric drag, the Moon, the Sun, and solar radiation
+        pressure. Engineers counter these effects through routine station-keeping maneuvers.
+      </p>
+
+      <h2>References</h2>
+      <p style="color:#6D7480;font-size:14px">
+        Newton — <em>Principia Mathematica</em> (1687)<br>
+        Kepler — <em>Astronomia Nova</em> (1609)<br>
+        Vallado — <em>Fundamentals of Astrodynamics and Applications</em><br>
+        Prussing & Conway — <em>Orbital Mechanics</em>
+      </p>
+
+      <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+</body>
+</html>
