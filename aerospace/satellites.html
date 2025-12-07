@@ -1,1 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Satellites & telemetry — Skyward She</title>
+  <meta name="description" content="A detailed guide to satellites, payloads, orbits and telemetry systems. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA; --card:#ffffff; --accent:#0A4C8A; --muted:#6D7480; --maxw:900px; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:28px;background:var(--bg);font-family:'Poppins',Arial,sans-serif;color:#1d2a3a;}
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 10px 24px rgba(12,30,60,0.05)}
+    h1{font-family:'Bebas Neue',sans-serif;color:var(--accent);font-size:36px;margin:0 0 8px}
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:16px}
+    h2{font-family:'Bebas Neue',sans-serif;color:#0A4C8A;margin-top:20px;margin-bottom:8px;font-size:22px}
+    h3{color:#0f3f65;margin-top:14px}
+    p{color:var(--muted);line-height:1.7}
+    ul{color:var(--muted);margin-left:20px}
+    .back{display:inline-block;margin-top:24px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:9px;text-decoration:none;font-weight:600}
+    .refs{color:var(--muted);font-size:14px;line-height:1.6;margin-top:10px}
+    footer{text-align:center;margin-top:40px;color:#9aa4b2;font-size:13px}
+    @media(max-width:640px){h1{font-size:30px}}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+
+      <h1>Satellites & telemetry</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p class="lead">
+        Satellites are the silent infrastructure of the modern world. From weather prediction to navigation systems,
+        scientific research and global communication, satellites rely on orbital mechanics, onboard instruments and
+        telemetry — the continuous stream of data linking spacecraft to Earth.
+      </p>
+
+      <h2>1. What exactly is a satellite?</h2>
+      <p>
+        A satellite is any object that orbits a planet because gravity pulls it inward while its forward velocity keeps it moving sideways.
+        Natural satellites (like the Moon) share the same physics as artificial satellites used for communications, imaging, navigation
+        and deep-space exploration.
+      </p>
+
+      <h2>2. Types of orbits and their purposes</h2>
+
+      <h3>Low Earth Orbit (LEO)</h3>
+      <p>
+        Altitude: 160–2,000 km. Used by imaging satellites, ISS, Starlink.
+        Offers high resolution and low latency but requires large constellations.
+      </p>
+
+      <h3>Medium Earth Orbit (MEO)</h3>
+      <p>
+        Altitude: 2,000–35,786 km. Home to navigation systems like GPS, Galileo and GLONASS.
+      </p>
+
+      <h3>Geostationary Orbit (GEO)</h3>
+      <p>
+        At 35,786 km, satellites orbit at the same rotational speed as Earth, appearing fixed in the sky.
+        Ideal for weather, communication and broadcast missions.
+      </p>
+
+      <h3>Special orbits</h3>
+      <ul>
+        <li><strong>Sun-synchronous:</strong> constant lighting conditions for imaging missions.</li>
+        <li><strong>Molniya:</strong> long dwell time over high latitudes.</li>
+        <li><strong>Polar:</strong> covers the entire Earth as the planet rotates beneath the orbit.</li>
+      </ul>
+
+      <h2>3. What payloads do satellites carry?</h2>
+      <p>Satellites are divided into two main components:</p>
+
+      <h3>The payload</h3>
+      <ul>
+        <li>Imagers and multispectral cameras</li>
+        <li>Radar (SAR)</li>
+        <li>Communication transponders</li>
+        <li>Scientific instruments</li>
+        <li>Navigation payloads with atomic clocks</li>
+      </ul>
+
+      <h3>The bus (spacecraft body)</h3>
+      <ul>
+        <li>Power systems (solar arrays and batteries)</li>
+        <li>Attitude control (reaction wheels, magnetorquers, star trackers)</li>
+        <li>Propulsion</li>
+        <li>Thermal management</li>
+        <li>Command and data handling computers</li>
+      </ul>
+
+      <h2>4. Telemetry: how satellites communicate with Earth</h2>
+      <p>
+        Telemetry is the continuous stream of health, status and science data sent from a satellite to Earth.
+        Engineers rely on telemetry to track:
+      </p>
+      <ul>
+        <li>Battery state and power production</li>
+        <li>Temperatures across the spacecraft</li>
+        <li>Attitude and angular rates</li>
+        <li>Propellant levels</li>
+        <li>Payload activity</li>
+        <li>Error logs and computer health</li>
+      </ul>
+
+      <h3>How telemetry works</h3>
+      <ul>
+        <li>The satellite encodes data into radio signals.</li>
+        <li>Antennas transmit the signals to Earth.</li>
+        <li>Ground stations receive and decode the information.</li>
+        <li>Engineers analyze it and send command uplinks back to space.</li>
+      </ul>
+
+      <h3>Common telemetry bands</h3>
+      <ul>
+        <li><strong>UHF/VHF:</strong> small satellites, amateur missions</li>
+        <li><strong>S-band:</strong> science telemetry and command</li>
+        <li><strong>X-band:</strong> Earth observation, high data rate</li>
+        <li><strong>Ka-band:</strong> very high bandwidth communication</li>
+      </ul>
+
+      <h2>5. Attitude control: keeping the satellite pointed correctly</h2>
+      <p>
+        Orientation is essential for imaging, communication and solar power. Spacecraft use:
+      </p>
+      <ul>
+        <li>Reaction wheels</li>
+        <li>Magnetorquers</li>
+        <li>Thrusters</li>
+        <li>Star trackers</li>
+      </ul>
+
+      <h2>6. Why telemetry is essential</h2>
+      <p>
+        Telemetry enables long-duration space missions. Voyager 1, launched in 1977, still transmits data from interstellar space.
+        Mission control relies on telemetry to assess spacecraft health, schedule maneuvers, prevent failures and optimize mission success.
+      </p>
+
+      <h2>References</h2>
+      <div class="refs">
+        <p><strong>NASA Goddard Space Flight Center.</strong><br>
+        “Telemetry, Tracking and Command.” https://www.nasa.gov</p>
+
+        <p><strong>ESA — European Space Agency.</strong><br>
+        “Satellite Orbits and Mission Architecture.” https://www.esa.int</p>
+
+        <p><strong>Wertz, James R., and Larson, Wiley J.</strong><br>
+        <em>Space Mission Analysis and Design.</em> Microcosm Press, 2011.</p>
+
+        <p><strong>NOAA.</strong><br>
+        “GOES-R Series: Spacecraft and Instruments.”</p>
+
+        <p><strong>NASA JPL.</strong><br>
+        “Deep Space Network Communication Protocols.”</p>
+      </div>
+
+      <div style="margin-top:26px;">
+        <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+      </div>
+
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+</body>
+</html>
