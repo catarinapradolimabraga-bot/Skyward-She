@@ -1,1 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aircraft design — wings, stability & control surfaces</title>
+  <meta name="description" content="A detailed explanation of wing geometry, aircraft stability and control surfaces. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA;
+      --card:#ffffff;
+      --accent:#0A4C8A;
+      --muted:#6D7480;
+      --maxw:900px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      padding:28px;
+      background:var(--bg);
+      font-family:'Poppins',Arial,sans-serif;
+      color:#1d2a3a;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 24px rgba(12,30,60,0.05);
+    }
+    h1{
+      font-family:'Bebas Neue',sans-serif;
+      color:var(--accent);
+      font-size:36px;
+      margin:0 0 8px;
+    }
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:16px}
+    h2{
+      font-family:'Bebas Neue',sans-serif;
+      color:#0A4C8A;
+      margin-top:20px;
+      margin-bottom:8px;
+      font-size:22px;
+    }
+    h3{color:#0f3f65;margin-top:14px}
+    p{color:var(--muted);line-height:1.7}
+    ul{color:var(--muted);margin-left:20px}
+    .refs{color:var(--muted);font-size:14px;line-height:1.6;margin-top:12px}
+    .back{
+      display:inline-block;
+      margin-top:26px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:9px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer{text-align:center;margin-top:40px;color:#9aa4b2;font-size:13px}
+    @media(max-width:640px){h1{font-size:30px}}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+
+      <h1>Aircraft design — wings, stability & control surfaces</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p class="lead">
+        Aircraft design is a delicate balance between aerodynamics, stability and mission performance. Every curve of a 
+        wing, every adjustment in the tail, and every control surface contributes to how an aircraft flies, maneuvers 
+        and remains stable across a wide range of speeds and atmospheric conditions.
+      </p>
+
+      <h2>1. The purpose of wings: more than generating lift</h2>
+      <p>
+        Wings generate lift, but they also define efficiency, stability and maneuverability. Their geometry shapes the 
+        entire flight experience. Important characteristics include wing planform, aspect ratio and airfoil design.
+      </p>
+
+      <h3>Wing planform</h3>
+      <p>
+        The shape of the wing as viewed from above influences drag, maneuverability and stall behavior:
+      </p>
+      <ul>
+        <li><strong>Straight wings</strong> — common in trainers and low-speed aircraft.</li>
+        <li><strong>Swept wings</strong> — reduce drag at high speeds; ideal for jet airliners.</li>
+        <li><strong>Delta wings</strong> — excellent at high angles of attack; common in supersonic aircraft.</li>
+      </ul>
+
+      <h3>Aspect ratio</h3>
+      <p>
+        High aspect ratio wings (long and slender) are extremely efficient, as seen in gliders. Low aspect ratio wings 
+        (shorter and wider) provide agility and are often used in fighter jets.
+      </p>
+
+      <h3>Airfoil shape</h3>
+      <p>
+        The airfoil cross-section determines how lift is produced, the drag profile, stall behavior and performance at 
+        various speeds.
+      </p>
+
+      <h2>2. Center of gravity & aerodynamic center</h2>
+      <p>
+        Aircraft stability depends on the relationship between the center of gravity (CG) and the aerodynamic center (AC). 
+        For stable flight, the CG must lie ahead of the AC. If the CG shifts too far aft, the aircraft becomes unstable — 
+        pitch disturbances grow instead of settling.
+      </p>
+
+      <h2>3. Control surfaces: how pilots command the aircraft</h2>
+
+      <h3>Ailerons — roll control</h3>
+      <p>Located at the outer trailing edge of the wings; they create differential lift to roll the aircraft.</p>
+
+      <h3>Elevator — pitch control</h3>
+      <p>Mounted on the horizontal stabilizer; it raises or lowers the nose of the aircraft.</p>
+
+      <h3>Rudder — yaw control</h3>
+      <p>Mounted on the vertical stabilizer; it controls directional movement and balances turns.</p>
+
+      <h2>4. Stability: longitudinal, lateral and directional</h2>
+
+      <h3>Longitudinal stability (pitch)</h3>
+      <p>
+        Determined by CG position, tail size and wing placement. A stable aircraft naturally returns to level flight after 
+        a pitch disturbance.
+      </p>
+
+      <h3>Lateral stability (roll)</h3>
+      <p>
+        Influenced by wing dihedral, sweep angle and high-wing vs low-wing configuration.
+      </p>
+
+      <h3>Directional stability (yaw)</h3>
+      <p>
+        Provided by the vertical stabilizer, fuselage geometry and, in some cases, dorsal fins.
+      </p>
+
+      <h2>5. Wings and maneuverability</h2>
+      <p>
+        Designers balance stability and agility. Fighter jets often have relaxed static stability — intentionally unstable 
+        designs stabilized by fly-by-wire computers — enabling rapid maneuverability.
+      </p>
+
+      <h2>6. High-lift devices: flaps, slats & spoilers</h2>
+
+      <h3>Flaps</h3>
+      <p>Increase wing camber and lift during takeoff and landing.</p>
+
+      <h3>Slats</h3>
+      <p>Delay stall by improving airflow at high angles of attack.</p>
+
+      <h3>Spoilers</h3>
+      <p>Reduce lift and increase drag, assisting in descent and braking.</p>
+
+      <h2>7. Why modern aircraft look the way they do</h2>
+      <p>
+        Design reflects mission: airliners prioritize efficiency, fighters prioritize maneuverability, and gliders prioritize 
+        low drag. Every aircraft is a compromise between performance, stability, safety and mission requirements.
+      </p>
+
+      <h2>References</h2>
+      <div class="refs">
+        <p><strong>Anderson, John D.</strong> <em>Fundamentals of Aerodynamics.</em> McGraw-Hill.</p>
+        <p><strong>Raymer, Daniel P.</strong> <em>Aircraft Design: A Conceptual Approach.</em> AIAA.</p>
+        <p><strong>FAA</strong> — Pilot’s Handbook of Aeronautical Knowledge.</p>
+        <p><strong>NASA Armstrong Flight Research Center</strong> — Aerodynamic Stability and Control.</p>
+        <p><strong>Etkin, Bernard.</strong> <em>Dynamics of Flight: Stability and Control.</em></p>
+      </div>
+
+      <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+</body>
+</html>
