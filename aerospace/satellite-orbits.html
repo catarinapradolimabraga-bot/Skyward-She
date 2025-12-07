@@ -1,1 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Satellite orbits — LEO, MEO, GEO & special orbits</title>
+  <meta name="description" content="Detailed explanation of satellite orbit types, including LEO, MEO, GEO, Sun-synchronous, Molniya and more. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA;
+      --card:#ffffff;
+      --accent:#0A4C8A;
+      --muted:#6D7480;
+      --maxw:900px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      padding:28px;
+      background:var(--bg);
+      font-family:'Poppins',Arial,sans-serif;
+      color:#1d2a3a;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 24px rgba(12,30,60,0.05);
+    }
+    h1{
+      font-family:'Bebas Neue',sans-serif;
+      color:var(--accent);
+      font-size:36px;
+      margin:0 0 8px;
+    }
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:16px}
+    h2{
+      font-family:'Bebas Neue',sans-serif;
+      color:#0A4C8A;
+      margin-top:20px;
+      margin-bottom:8px;
+      font-size:22px;
+    }
+    h3{
+      color:#0f3f65;
+      margin-top:14px;
+    }
+    p{
+      color:var(--muted);
+      line-height:1.7;
+    }
+    ul{
+      color:var(--muted);
+      margin-left:20px;
+    }
+    .refs{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+      margin-top:12px;
+    }
+    .back{
+      display:inline-block;
+      margin-top:26px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:9px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer{
+      text-align:center;
+      margin-top:40px;
+      color:#9aa4b2;
+      font-size:13px;
+    }
+    @media(max-width:640px){h1{font-size:30px}}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+
+      <h1>Satellite orbits — LEO, MEO, GEO & special orbits</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p class="lead">
+        Satellites occupy a variety of orbital regimes, each chosen to match mission needs such as coverage, resolution,
+        latency and stability. From low Earth imaging to geostationary communications, each orbit offers unique advantages
+        and engineering challenges. This article explains the structure and purpose of the most important orbits used today.
+      </p>
+
+      <h2>1. Low Earth Orbit (LEO)</h2>
+      <p><strong>Altitude:</strong> 160–2,000 km<br>
+         <strong>Period:</strong> ~90–120 minutes<br>
+         <strong>Velocity:</strong> ~7.8 km/s
+      </p>
+      <p>
+        LEO is the most active orbital region, hosting remote sensing satellites, scientific missions, the ISS, and modern
+        broadband constellations. It provides high-resolution imagery, low communication latency, and relatively low launch
+        requirements — but suffers from atmospheric drag and growing congestion.
+      </p>
+
+      <h2>2. Medium Earth Orbit (MEO)</h2>
+      <p>
+        <strong>Altitude:</strong> 2,000–35,786 km<br>
+        <strong>Period:</strong> several hours
+      </p>
+      <p>
+        Navigation constellations such as GPS, Galileo and GLONASS operate in MEO. Its altitude enables global coverage with
+        fewer satellites and offers a stable, low-drag environment for precise timing and positioning missions.
+      </p>
+
+      <h2>3. Geostationary Orbit (GEO)</h2>
+      <p>
+        <strong>Altitude:</strong> 35,786 km<br>
+        <strong>Period:</strong> 24 hours (Earth rotation)
+      </p>
+      <p>
+        GEO satellites appear fixed in the sky. This makes them ideal for communications, broadcast television, and weather
+        monitoring. GEO offers unmatched coverage but requires high launch energy and results in higher communication latency.
+      </p>
+
+      <h2>4. Sun-synchronous Orbit (SSO)</h2>
+      <p>
+        SSO is a specialized near-polar LEO orbit that maintains constant local solar time for each ground pass. This enables
+        imaging missions to compare lighting conditions consistently, which is essential for climate science, remote sensing
+        and environmental monitoring.
+      </p>
+
+      <h2>5. Molniya Orbit</h2>
+      <p>
+        A highly elliptical, 12-hour orbit designed for high-latitude coverage. Because GEO satellites sit low on the horizon
+        for northern regions, Molniya orbit provides extended dwell time over Arctic and sub-Arctic locations — ideal for
+        communications and early-warning systems.
+      </p>
+
+      <h2>6. Tundra Orbit</h2>
+      <p>
+        Similar to Molniya but with a 24-hour period. Tundra orbits provide GEO-like coverage for high latitudes, with long
+        dwell time and flexible positioning. Used for services such as satellite radio in North America.
+      </p>
+
+      <h2>7. Orbital end-of-life: disposal & mitigation</h2>
+      <p>
+        GEO satellites are boosted into a “graveyard orbit” hundreds of kilometers above GEO to prevent interference. LEO
+        satellites typically deorbit to burn up in the atmosphere. With rising satellite numbers, debris mitigation is a
+        central engineering requirement for all new missions.
+      </p>
+
+      <h2>References</h2>
+      <div class="refs">
+        <p><strong>NASA Goddard Space Flight Center</strong> — Earth Orbits and Mission Design.</p>
+        <p><strong>ESA Earth Observation Guide</strong> — Orbit Types and Applications.</p>
+        <p><strong>Wertz & Larson</strong> — <em>Space Mission Analysis and Design.</em></p>
+        <p><strong>NOAA Satellite and Information Service</strong> — Geostationary and Polar Orbit Guides.</p>
+        <p><strong>NASA JPL</strong> — Mission Design & Navigation.</p>
+      </div>
+
+      <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </div>
+</body>
+</html>
