@@ -1,1 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Escape velocity & orbital energy — Skyward She</title>
+  <meta name="description" content="Escape velocity and orbital energy: what they mean, how to change orbits, and how we plan interplanetary missions. By Catarina Prado.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --bg:#F7F8FA;
+      --card:#ffffff;
+      --accent:#0A4C8A;
+      --muted:#6D7480;
+      --maxw:900px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      padding:28px;
+      background:var(--bg);
+      font-family:'Poppins',Arial,sans-serif;
+      color:#1d2a3a;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;}
+    .card{
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 24px rgba(12,30,60,0.05);
+    }
+    h1{
+      font-family:'Bebas Neue',sans-serif;
+      color:var(--accent);
+      font-size:36px;
+      margin:0 0 8px;
+    }
+    .meta{color:#9aa4b2;font-size:14px;margin-bottom:20px}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:16px}
+    h2{
+      font-family:'Bebas Neue',sans-serif;
+      color:#0A4C8A;
+      margin-top:20px;
+      margin-bottom:8px;
+      font-size:22px;
+    }
+    h3{color:#0f3f65;margin-top:14px}
+    p{color:var(--muted);line-height:1.7}
+    ul{color:var(--muted);margin-left:20px}
+    .refs{color:var(--muted);font-size:14px;line-height:1.6;margin-top:10px}
+    .back{
+      display:inline-block;
+      margin-top:26px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:9px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer{text-align:center;margin-top:40px;color:#9aa4b2;font-size:13px}
+    @media(max-width:640px){h1{font-size:30px}}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main class="card">
+
+      <h1>Escape velocity & orbital energy</h1>
+      <p class="meta">By Catarina Prado — Published on December 7, 2025</p>
+
+      <p class="lead">
+        Spaceflight is ultimately an exercise in energy management. Knowing how much kinetic and potential energy
+        a vehicle needs determines whether it remains bound to a planet, transfers between orbits, or escapes into
+        interplanetary space. This article explains escape velocity, specific orbital energy, and the practical maneuvers
+        engineers use to change a spacecraft's energy state.
+      </p>
+
+      <h2>1. Defining escape velocity</h2>
+      <p>
+        Escape velocity is the minimum speed at which an object, starting at a given distance from a planet, can coast
+        to infinity without further propulsion. From Earth's surface this value is approximately <strong>11.2 km/s</strong>.
+        It is derived from conservation of energy: the initial kinetic energy must be sufficient to overcome the planet's
+        gravitational potential energy.
+      </p>
+      <p>
+        Note: reaching escape velocity in a single instantaneous impulse is not required in practice. Staged rockets,
+        continuous low-thrust propulsion, or gravity assists can increase a spacecraft’s total energy until it achieves an
+        unbound trajectory.
+      </p>
+
+      <h2>2. Specific orbital energy</h2>
+      <p>
+        For a bound orbit the specific orbital energy (energy per unit mass) is negative and given by:
+      </p>
+      <p><code>ε = -GM / (2a)</code></p>
+      <p>
+        where <code>G</code> is the gravitational constant, <code>M</code> is the central body's mass and <code>a</code> is the
+        semi-major axis. The sign and magnitude of ε determine whether an orbit is low, high, or unbound (ε ≥ 0).
+      </p>
+
+      <h2>3. Why orbital objects don't fall straight down</h2>
+      <p>
+        An orbiting body is in continuous free fall, but its tangential velocity is sufficient for the curvature of the planet
+        to match the fall. Circular and elliptical orbits are simply stable energy configurations where gravity provides the
+        centripetal force required for the spacecraft's curved motion.
+      </p>
+
+      <h2>4. Changing orbital energy: maneuvers and Δv</h2>
+      <p>
+        Increasing or decreasing orbital energy requires a change in velocity (Δv). Engineers design maneuvers to maximize
+        Δv efficiency:
+      </p>
+      <h3>Hohmann transfer</h3>
+      <p>
+        The two-burn Hohmann transfer is the most fuel-efficient method to move between two coplanar circular orbits.
+        It raises the spacecraft onto an elliptical transfer orbit, then circularizes at the target altitude.
+      </p>
+
+      <h3>Bi-elliptic transfer</h3>
+      <p>
+        For very large altitude changes, a bi-elliptic sequence can be more efficient than a single Hohmann transfer.
+      </p>
+
+      <h3>Escaping Earth</h3>
+      <p>
+        To escape Earth's gravity a spacecraft must raise its specific orbital energy to zero or positive. In practice,
+        missions combine high launch energy, staging, and sometimes planetary gravity assists to reach interplanetary velocities.
+      </p>
+
+      <h2>5. Interplanetary energy and gravity assists</h2>
+      <p>
+        After leaving Earth, a spacecraft's motion is governed by the Sun's gravity. The Sun's escape velocity at Earth's
+        orbital distance is far larger (~42 km/s). Gravity assists (flybys) let spacecraft change heliocentric energy by
+        exchanging momentum with planets — an essential tool for missions like Voyager and New Horizons.
+      </p>
+
+      <h2>6. Engineering implications</h2>
+      <p>
+        Energy calculations set payload mass, propellant needs, and required engine performance. Designers use the rocket
+        equation alongside energy budgeting to size stages, plan trajectories, and choose whether to rely on direct injection,
+        low-thrust spirals, or gravity assists.
+      </p>
+
+      <h2>References</h2>
+      <div class="refs">
+        <p><strong>NASA Jet Propulsion Laboratory (JPL).</strong><br>
+        “Basics of Space Flight — Trajectory and Energy.”</p>
+
+        <p><strong>ESA — European Space Agency.</strong><br>
+        “Orbital Mechanics and Transfer Maneuvers.”</p>
+
+        <p><strong>Bate, Mueller & White.</strong><br>
+        <em>Fundamentals of Astrodynamics.</em> Dover Publications, 1971.</p>
+
+        <p><strong>Wertz & Larson.</strong><br>
+        <em>Space Mission Analysis and Design.</em></p>
+
+        <p><strong>NASA Goddard Space Flight Center.</strong><br>
+        “Escape Velocity and Orbital Dynamics.”</p>
+      </div>
+
+      <a class="back" href="../aerospace101.html">← Back to Aerospace 101</a>
+
+    </main>
+
+    <footer>© Skyward She — Catarina • Porto Velas, Rondônia</footer>
+  </div>
+</body>
+</html>
