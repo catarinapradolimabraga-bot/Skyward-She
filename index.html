@@ -117,7 +117,15 @@
           <li><a href="#about">About</a></li>
           <li><a href="posts/post1.html">Articles</a></li>
           <li><a href="aerospace101.html">Aerospace 101</a></li>
+
+          <!--
+            VERIFIED / ADDED: "Women in STEM" menu item.
+            - Location: main navigation (keeps same style as other links).
+            - Relative path used: womeninstem.html
+            If you store pages in a subfolder, change href to the correct relative path (e.g. "pages/womeninstem.html").
+          -->
           <li><a href="womeninstem.html">Women in STEM</a></li>
+
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -136,7 +144,12 @@
       </div>
 
       <div class="hero-figure">
-        <!-- make sure this file exists in your repo or upload it (hero-earth.jpg) -->
+        <!-- HERO IMAGE: if you want to use a local image in the repo, upload it to:
+             /assets/images/hero-earth.jpg
+           then change the src below to that relative path:
+             src="/assets/images/hero-earth.jpg"
+           Current image is hosted on GitHub raw content and will work as-is.
+        -->
         <img alt="Earth from space" src="https://raw.githubusercontent.com/catarinapradolimabraga-bot/Skyward-She/main/hero-earth.jpg">
         <div style="font-size:13px;color:#9aa4b2;margin-top:8px;text-align:center">Featured: How the Space Age still shapes modern aerospace design</div>
       </div>
@@ -173,7 +186,11 @@
     <section id="about" class="about-section">
       <div class="about-wrap">
         <div class="about-img">
-          <!-- About image (make sure the file about-math.jpg exists in your repo) -->
+          <!-- ABOUT IMAGE: to use a repo-hosted image, upload to:
+               /assets/images/about-math.jpg
+             then update src to: src="/assets/images/about-math.jpg"
+             Current image is hosted on GitHub raw content and will work as-is.
+          -->
           <img src="https://raw.githubusercontent.com/catarinapradolimabraga-bot/Skyward-She/main/about-math.jpg" alt="Study board">
         </div>
         <div class="about-text">
@@ -236,6 +253,13 @@
 
     <div class="footer">© Skyward She — Catarina • Porto Velho, Rondônia</div>
   </main>
+
+  <!--
+    NOTES:
+    - To test changes immediately after pushing, do a hard reload in browser (Ctrl+F5 / Cmd+Shift+R).
+    - If you move "womeninstem.html" into a folder, update the href in the nav to the correct relative path.
+    - If you want me to also create the womeninstem.html file (I already prepared one earlier), tell me and I will paste it ready to save in the repo.
+  -->
 
 </body>
 </html>
