@@ -111,6 +111,41 @@
     @media(max-width:640px){
       h1{font-size:30px}
     }
+    .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #eef2f5;
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.info-card h3 {
+  margin: 0 0 8px;
+  color: #0A4C8A;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.info-card p {
+  margin: 0;
+  color: #6D7480;
+  line-height: 1.5;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(12,30,60,0.08);
+}
+
   </style>
 </head>
 
@@ -130,19 +165,27 @@
         to encourage girls who are curious, ambitious and ready to build their place in STEM.
       </p>
 
-      <h2>What you’ll find here</h2>
+      <h2 class="section-title">What you’ll find here</h2>
 
-     <a href="profiles/index.html" style="text-decoration:none;color:inherit;">
-  <div class="info-card">
+<div class="info-grid">
+
+  <a href="profiles/index.html" class="info-card">
     <h3>Profiles</h3>
     <p>Women who made — and are making — history in science and engineering.</p>
-  </div>
-</a>
+  </a>
 
-        <div class="box">
-          <h3>Stories & journeys</h3>
-          <p>Personal paths, challenges, and lessons from girls starting early in STEM.</p>
-        </div>
+  <a href="stories/index.html" class="info-card">
+    <h3>Stories & journeys</h3>
+    <p>Personal paths, challenges, and lessons from girls starting early in STEM.</p>
+  </a>
+
+  <a href="resources/index.html" class="info-card">
+    <h3>Resources</h3>
+    <p>Books, projects and ideas to explore STEM at any age.</p>
+  </a>
+
+</div>
+
 
         <div class="box">
           <h3>Resources</h3>
