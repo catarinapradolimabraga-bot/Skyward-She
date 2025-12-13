@@ -1,24 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+  <meta charset="utf-8">
   <title>Katherine Johnson — Women in STEM | Skyward She</title>
-
-  <meta name="description" content="Katherine Johnson — NASA mathematician whose calculations were critical to the success of the first U.S. human spaceflights.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#F7F8FA; 
-      --card:#ffffff; 
-      --accent:#0A4C8A; 
-      --muted:#6D7480; 
-      --maxw:900px; 
+      --bg:#F7F8FA;
+      --card:#ffffff;
+      --accent:#0A4C8A;
+      --muted:#6D7480;
       --radius:12px;
+      --maxw:900px;
     }
 
     *{box-sizing:border-box}
@@ -32,169 +29,215 @@
 
     .container{
       max-width:var(--maxw);
-      margin:28px auto;
+      margin:40px auto;
       padding:0 16px;
-    }
-
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:20px;
-    }
-
-    .brand{
-      font-family:'Bebas Neue',sans-serif;
-      font-size:22px;
-      color:var(--accent);
-    }
-
-    .breadcrumb{
-      font-size:13px;
-      color:#9aa4b2;
     }
 
     .card{
       background:var(--card);
-      padding:26px;
+      padding:28px;
       border-radius:var(--radius);
-      box-shadow:0 10px 24px rgba(12,30,60,0.05);
+      box-shadow:0 10px 24px rgba(12,30,60,0.06);
     }
 
     h1{
       font-family:'Bebas Neue',sans-serif;
       color:var(--accent);
       font-size:34px;
-      margin:0 0 6px;
+      margin-bottom:6px;
     }
 
     .meta{
       font-size:13px;
       color:#9aa4b2;
-      margin-bottom:18px;
+      margin-bottom:20px;
+    }
+
+    .profile-header{
+      display:flex;
+      gap:28px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+    }
+
+    .profile-img{
+      flex:0 0 260px;
+      max-width:260px;
+    }
+
+    .profile-img img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid #e5e9ee;
+      display:block;
+    }
+
+    .caption{
+      font-size:12px;
+      color:#9aa4b2;
+      margin-top:6px;
+      text-align:center;
+    }
+
+    .profile-text{
+      flex:1;
+      min-width:260px;
+    }
+
+    .profile-text p{
+      color:var(--muted);
+      line-height:1.7;
+      margin-bottom:14px;
     }
 
     h2{
       font-family:'Bebas Neue',sans-serif;
-      color:var(--accent);
-      margin-top:26px;
+      color:#0f3f65;
+      margin-top:28px;
       margin-bottom:10px;
       font-size:22px;
-    }
-
-    p{
-      color:var(--muted);
-      line-height:1.65;
-      margin-bottom:14px;
     }
 
     ul{
       color:var(--muted);
       margin-left:18px;
+      line-height:1.6;
+    }
+
+    .timeline{
+      border-left:3px solid var(--accent);
+      padding-left:18px;
+      margin-top:10px;
+    }
+
+    .timeline-item{
+      margin-bottom:14px;
+    }
+
+    .timeline-item strong{
+      color:#0f3f65;
+    }
+
+    .references a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    .references a:hover{
+      text-decoration:underline;
     }
 
     .back{
       display:inline-block;
-      margin-top:24px;
+      margin-top:30px;
       background:var(--accent);
       color:#fff;
-      padding:10px 14px;
+      padding:10px 16px;
       border-radius:9px;
       text-decoration:none;
       font-weight:600;
     }
 
     footer{
-      margin:32px 0 60px;
+      margin-top:40px;
       text-align:center;
-      font-size:13px;
       color:#98a3ad;
-    }
-
-    @media(max-width:640px){
-      h1{font-size:30px}
+      font-size:13px;
     }
   </style>
 </head>
+
 <body>
-
-  <div class="container">
-
-    <header>
-      <div>
-        <div class="brand">Skyward She</div>
-        <div class="breadcrumb">Women in STEM • Profiles</div>
-      </div>
-      <a href="../index.html" style="font-size:14px;color:var(--accent);font-weight:600;">Women in STEM</a>
-    </header>
-
-    <main class="card">
+  <main class="container">
+    <div class="card">
 
       <h1>Katherine Johnson</h1>
-      <div class="meta">
-        By Catarina Prado — Published on Dec 7, 2025
+      <div class="meta">Published on December 13, 2025</div>
+
+      <div class="profile-header">
+
+        <!-- IMAGE -->
+        <div class="profile-img">
+          <img src="../assets/katherine-johnson.jpg"
+               alt="Katherine Johnson, NASA mathematician">
+          <div class="caption">
+            Katherine Johnson at NASA — Public domain (NASA)
+          </div>
+        </div>
+
+        <!-- INTRO TEXT -->
+        <div class="profile-text">
+          <p>
+            Katherine Johnson (1918–2020) was an American mathematician whose
+            calculations were critical to the success of the United States’
+            first human space missions.
+          </p>
+
+          <p>
+            Working at NASA during an era of racial and gender segregation,
+            she became internationally recognized for her mastery of orbital
+            mechanics and trajectory analysis.
+          </p>
+        </div>
       </div>
 
-      <p>
-        Katherine Johnson was a mathematician whose work at NASA became essential to the success of the early U.S. space program. 
-        At a time when both racial and gender barriers were deeply embedded in science and engineering, her calculations helped send astronauts safely into space — and back to Earth.
-      </p>
-
-      <h2>Early life and passion for mathematics</h2>
-      <p>
-        Born in 1918 in West Virginia, Katherine Johnson showed extraordinary talent in mathematics from an early age. 
-        She advanced quickly through school, graduating from college at just 18 years old with degrees in mathematics and French.
-      </p>
-
-      <p>
-        Her love for numbers was not abstract — she saw mathematics as a practical language capable of describing motion, trajectories, and physical reality.
-      </p>
-
-      <h2>NASA and the space race</h2>
-      <p>
-        Katherine joined what was then the National Advisory Committee for Aeronautics (NACA), later NASA, as part of a group of women known as “human computers.”
-        Her role was to calculate flight paths, orbital mechanics, and reentry trajectories with extreme precision.
-      </p>
-
-      <p>
-        During the Mercury program, astronaut John Glenn famously requested that Katherine personally verify the computer-generated calculations for his orbital flight.
-        He trusted her math over the machines — and she was right.
-      </p>
-
-      <h2>Impact on aerospace engineering</h2>
-      <p>
-        Katherine Johnson’s work contributed to:
-      </p>
-
+      <h2>Key Contributions</h2>
       <ul>
-        <li>The first American human spaceflight</li>
-        <li>The first American orbital mission</li>
-        <li>The Apollo missions, including Apollo 11</li>
+        <li>Calculated trajectories for the first American human spaceflight</li>
+        <li>Verified orbital data for John Glenn’s Earth orbit mission</li>
+        <li>Contributed to the Apollo Moon landing missions</li>
+        <li>Worked on Space Shuttle and Earth resources programs</li>
       </ul>
 
-      <p>
-        Her calculations combined Newtonian mechanics, analytical geometry, and an intuitive understanding of motion — skills that remain foundational in aerospace engineering today.
+      <h2>Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>1918</strong> — Born in White Sulphur Springs, West Virginia
+        </div>
+        <div class="timeline-item">
+          <strong>1953</strong> — Joined NACA (later NASA) as a mathematician
+        </div>
+        <div class="timeline-item">
+          <strong>1962</strong> — Verified John Glenn’s orbital flight calculations
+        </div>
+        <div class="timeline-item">
+          <strong>1969</strong> — Contributed to Apollo 11 Moon landing
+        </div>
+        <div class="timeline-item">
+          <strong>2015</strong> — Awarded the Presidential Medal of Freedom
+        </div>
+      </div>
+
+      <h2>Why She Matters</h2>
+      <p class="profile-text">
+        Katherine Johnson transformed aerospace engineering and opened doors
+        for generations of women and minorities in STEM. Her legacy proves
+        that curiosity, precision, and perseverance can change history.
       </p>
 
-      <h2>Why her legacy matters</h2>
-      <p>
-        Katherine Johnson proved that brilliance has no gender and no color.
-        Her career reminds us that science advances fastest when talent is recognized and allowed to flourish.
-      </p>
+      <h2>References</h2>
+      <ul class="references">
+        <li>
+          NASA — Katherine Johnson Biography:
+          <a href="https://www.nasa.gov/people/katherine-johnson/" target="_blank">
+            nasa.gov/people/katherine-johnson
+          </a>
+        </li>
+        <li>
+          NASA Modern Figures:
+          <a href="https://www.nasa.gov/modernfigures/" target="_blank">
+            nasa.gov/modernfigures
+          </a>
+        </li>
+      </ul>
 
-      <p>
-        For girls interested in STEM, her story is a powerful reminder: mastering fundamentals, asking questions, and trusting your own reasoning can take you all the way to space.
-      </p>
+      <a class="back" href="index.html">← Back to Profiles</a>
 
-      <a class="back" href="../index.html">← Back to Women in STEM</a>
-
-    </main>
+    </div>
 
     <footer>
       © Skyward She — Catarina • Porto Velho, Rondônia
     </footer>
-
-  </div>
-
+  </main>
 </body>
 </html>
