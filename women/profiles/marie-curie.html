@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Marie Curie — Women in STEM | Skyward She</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#F7F8FA;
+      --card:#ffffff;
+      --accent:#0A4C8A;
+      --muted:#6D7480;
+      --radius:12px;
+      --maxw:900px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      font-family:'Poppins',Arial,sans-serif;
+      color:#1d2a3a;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:40px auto;
+      padding:0 16px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 24px rgba(12,30,60,0.06);
+    }
+
+    h1{
+      font-family:'Bebas Neue',sans-serif;
+      color:var(--accent);
+      font-size:34px;
+      margin-bottom:6px;
+    }
+
+    .meta{
+      font-size:13px;
+      color:#9aa4b2;
+      margin-bottom:20px;
+    }
+
+    .profile-header{
+      display:flex;
+      gap:28px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+    }
+
+    .profile-img{
+      flex:0 0 260px;
+      max-width:260px;
+    }
+
+    .profile-img img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid #e5e9ee;
+      display:block;
+    }
+
+    .caption{
+      font-size:12px;
+      color:#9aa4b2;
+      margin-top:6px;
+      text-align:center;
+    }
+
+    .profile-text{
+      flex:1;
+      min-width:260px;
+    }
+
+    .profile-text p{
+      color:var(--muted);
+      line-height:1.7;
+      margin-bottom:14px;
+    }
+
+    h2{
+      font-family:'Bebas Neue',sans-serif;
+      color:#0f3f65;
+      margin-top:28px;
+      margin-bottom:10px;
+      font-size:22px;
+    }
+
+    ul{
+      color:var(--muted);
+      margin-left:18px;
+      line-height:1.6;
+    }
+
+    .timeline{
+      border-left:3px solid var(--accent);
+      padding-left:18px;
+      margin-top:10px;
+    }
+
+    .timeline-item{
+      margin-bottom:14px;
+    }
+
+    .timeline-item strong{
+      color:#0f3f65;
+    }
+
+    .references a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    .references a:hover{
+      text-decoration:underline;
+    }
+
+    .back{
+      display:inline-block;
+      margin-top:30px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:9px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    footer{
+      margin-top:40px;
+      text-align:center;
+      color:#98a3ad;
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="card">
+
+      <h1>Marie Curie</h1>
+      <div class="meta">Published on December 13, 2025</div>
+
+      <div class="profile-header">
+
+        <!-- IMAGE -->
+        <div class="profile-img">
+          <img src="../assets/marie-curie.jpg"
+               alt="Marie Curie, physicist and chemist">
+          <div class="caption">
+            Marie Curie in her laboratory — Public domain
+          </div>
+        </div>
+
+        <!-- INTRO TEXT -->
+        <div class="profile-text">
+          <p>
+            Marie Curie (1867–1934) was a Polish-born physicist and chemist whose
+            pioneering research laid the foundations of modern nuclear science.
+          </p>
+
+          <p>
+            She was the first woman to win a Nobel Prize, the only person to win
+            Nobel Prizes in two different scientific fields, and the first woman
+            to become a professor at the University of Paris.
+          </p>
+        </div>
+      </div>
+
+      <h2>Key Contributions</h2>
+      <ul>
+        <li>Discovered the chemical elements polonium and radium</li>
+        <li>Developed the theory and techniques of radioactivity</li>
+        <li>Pioneered the use of radiation in medicine</li>
+        <li>Established the first mobile radiology units during World War I</li>
+      </ul>
+
+      <h2>Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>1867</strong> — Born in Warsaw, Poland
+        </div>
+        <div class="timeline-item">
+          <strong>1898</strong> — Discovered polonium and radium
+        </div>
+        <div class="timeline-item">
+          <strong>1903</strong> — Won the Nobel Prize in Physics
+        </div>
+        <div class="timeline-item">
+          <strong>1911</strong> — Won the Nobel Prize in Chemistry
+        </div>
+        <div class="timeline-item">
+          <strong>1934</strong> — Died in France from aplastic anemia
+        </div>
+      </div>
+
+      <h2>Why She Matters</h2>
+      <p class="profile-text">
+        Marie Curie transformed science through persistence, curiosity, and
+        courage. Her work not only advanced physics and chemistry but also
+        proved that women belong at the very center of scientific discovery.
+      </p>
+
+      <h2>References</h2>
+      <ul class="references">
+        <li>
+          Nobel Prize — Marie Curie Biography:
+          <a href="https://www.nobelprize.org/prizes/chemistry/1911/marie-curie/biographical/"
+             target="_blank">
+            nobelprize.org
+          </a>
+        </li>
+        <li>
+          Britannica — Marie Curie:
+          <a href="https://www.britannica.com/biography/Marie-Curie"
+             target="_blank">
+            britannica.com
+          </a>
+        </li>
+      </ul>
+
+      <a class="back" href="index.html">← Back to Profiles</a>
+
+    </div>
+
+    <footer>
+      © Skyward She — Catarina • Porto Velho, Rondônia
+    </footer>
+  </main>
+</body>
+</html>
