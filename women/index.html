@@ -1,1 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+  <title>Women in STEM — Skyward She</title>
+  <meta name="description" content="Women in STEM — profiles, stories and inspiration for girls in science, technology, engineering and mathematics.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#F7F8FA;
+      --card:#ffffff;
+      --accent:#0A4C8A;
+      --muted:#6D7480;
+      --radius:12px;
+      --maxw:900px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      font-family:'Poppins', Arial, sans-serif;
+      color:#1d2a3a;
+    }
+
+    a{color:var(--accent);text-decoration:none}
+
+    .container{
+      max-width:var(--maxw);
+      margin:32px auto;
+      padding:0 16px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 24px rgba(12,30,60,0.05);
+    }
+
+    h1,h2{
+      font-family:'Bebas Neue', sans-serif;
+      color:var(--accent);
+      margin:0 0 12px;
+    }
+
+    h1{font-size:36px}
+    h2{font-size:22px;margin-top:28px}
+
+    p{
+      color:var(--muted);
+      line-height:1.6;
+      margin:0 0 14px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .box{
+      background:#f9fafb;
+      border:1px solid #eef2f5;
+      padding:16px;
+      border-radius:10px;
+    }
+
+    .box h3{
+      margin:0 0 6px;
+      font-size:16px;
+      color:#0f3f65;
+    }
+
+    .back{
+      display:inline-block;
+      margin-top:26px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:9px;
+      font-weight:600;
+    }
+
+    footer{
+      text-align:center;
+      color:#9aa4b2;
+      font-size:13px;
+      margin:40px 0 20px;
+    }
+
+    @media(max-width:640px){
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+    <section class="card">
+      <h1>Women in STEM</h1>
+
+      <p>
+        This section of <strong>Skyward She</strong> is dedicated to women and girls who are shaping
+        science, technology, engineering and mathematics — past, present and future.
+      </p>
+
+      <p>
+        Here you’ll find profiles of inspiring women, personal journeys, and resources designed
+        to encourage girls who are curious, ambitious and ready to build their place in STEM.
+      </p>
+
+      <h2>What you’ll find here</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3>Profiles</h3>
+          <p>Women who made — and are making — history in science and engineering.</p>
+        </div>
+
+        <div class="box">
+          <h3>Stories & journeys</h3>
+          <p>Personal paths, challenges, and lessons from girls starting early in STEM.</p>
+        </div>
+
+        <div class="box">
+          <h3>Resources</h3>
+          <p>Books, projects, competitions and ideas to explore STEM at any age.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:20px;">
+        This section will grow over time, with new profiles and articles added regularly.
+      </p>
+
+      <a class="back" href="../index.html">← Back to Home</a>
+    </section>
+
+    <footer>© Skyward She — Catarina • Porto Velho, Rondônia</footer>
+  </main>
+
+</body>
+</html>
