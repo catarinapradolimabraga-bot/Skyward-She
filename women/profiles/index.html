@@ -9,60 +9,86 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#F7F8FA;
-      --card:#ffffff;
-      --accent:#0A4C8A;
-      --muted:#6D7480;
-      --radius:12px;
-      --maxw:900px;
-    }
-
-    *{box-sizing:border-box}
-
     body{
       margin:0;
-      background:var(--bg);
-      font-family:'Poppins',Arial,sans-serif;
+      background:#F7F8FA;
+      font-family:'Poppins', Arial, sans-serif;
       color:#1d2a3a;
     }
 
     .container{
-      max-width:var(--maxw);
+      max-width:900px;
       margin:40px auto;
       padding:0 16px;
     }
 
     h1{
-      font-family:'Bebas Neue',sans-serif;
-      color:var(--accent);
-      font-size:34px;
+      font-family:'Bebas Neue', sans-serif;
+      color:#0A4C8A;
+      font-size:32px;
       margin-bottom:10px;
     }
 
-    .intro{
-      color:var(--muted);
-      margin-bottom:28px;
+    p{
+      color:#6D7480;
       line-height:1.6;
     }
 
-    /* cards grid */
-    .cards{
+    .profiles-grid{
+      margin-top:24px;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
-    }
-
-    .card-link{
-      text-decoration:none;
-      color:inherit;
-      display:block;
+      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+      gap:18px;
     }
 
     .profile-card{
-      background:var(--card);
-      padding:22px;
-      border-radius:var(--radius);
-      box-shadow:0 8px 18px rgba(12,30,60,0.05);
-      transition:transform .2s ease, box-shadow .2s ease;
-      height:100%;
+      background:#fff;
+      border:1px solid #eef2f5;
+      border-radius:12px;
+      padding:18px;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+
+    .profile-card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(12,30,60,.08);
+    }
+
+    .profile-card h3{
+      margin:0 0 6px;
+      color:#0A4C8A;
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:.5px;
+    }
+
+    .back{
+      display:inline-block;
+      margin-top:30px;
+      background:#0A4C8A;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:9px;
+      text-decoration:none;
+      font-weight:600;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Profiles — Women in STEM</h1>
+    <p>Profiles of women who shaped — and continue to shape — science, technology, engineering and mathematics.</p>
+
+    <div class="profiles-grid">
+      <a class="profile-card" href="katherine-johnson.html">
+        <h3>Katherine Johnson</h3>
+        <p>Mathematician whose orbital calculations were critical to NASA’s early space missions.</p>
+      </a>
+    </div>
+
+    <a class="back" href="../index.html">← Back to Women in STEM</a>
+  </main>
+</body>
+</html>
