@@ -42,19 +42,20 @@
     }
 
     .profile-card{
-      background:#fff;
-      border:1px solid #eef2f5;
-      border-radius:12px;
-      padding:18px;
-      text-decoration:none;
-      color:inherit;
-      transition:transform .15s ease, box-shadow .15s ease;
-    }
+  background:#fff;
+  border:1px solid #eef2f5;
+  border-radius:12px;
+  padding:18px;
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
 
-    .profile-card:hover{
-      transform:translateY(-2px);
-      box-shadow:0 10px 24px rgba(12,30,60,.08);
-    }
+.profile-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(12,30,60,.08);
+}
 
     .profile-card h3{
       margin:0 0 6px;
@@ -88,13 +89,11 @@
       </a>
     </div>
     
-<div class="profile-card">
+<a href="marie-curie.html" class="profile-card">
   <h3>Marie Curie</h3>
-  <p>
-    Physicist and chemist who pioneered the study of radioactivity and became
-    the first person to win Nobel Prizes in two different sciences.
-  </p>
-</div>
+  <p>Physicist and chemist who pioneered the study of radioactivity and became
+    the first person to win Nobel Prizes in two different sciences.</p>
+</a>
 
     <a class="back" href="../index.html">← Back to Women in STEM</a>
   </main>
