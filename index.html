@@ -91,6 +91,8 @@
       .hero{flex-direction:column}
       .hero-figure{order:-1}
       .about-wrap{flex-direction:column}
+
+    }
       /* thumbnail for post cards */
 .post-card .thumb {
   width: 100%;
@@ -101,8 +103,10 @@
   margin-bottom:12px;
 }
 @media (max-width:420px) {
-  .post-card .thumb { height:12.post-card
-    }
+  .post-card .thumb {
+    height:120px;
+  }
+}
 
 .posts-section{
   position:relative;
@@ -134,29 +138,43 @@
   background:#0A4C8A;
   color:#fff;
   border:none;
-  width:40px;
-  height:40px;
+  width:42px;
+  height:42px;
   border-radius:50%;
   cursor:pointer;
   font-size:18px;
   font-weight:600;
   box-shadow:0 6px 14px rgba(0,0,0,0.15);
   z-index:10;
-}
-
-.carousel-btn.left{
-  left:-10px;
-}
-
-.carousel-btn.right{
-  right:-10px;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
 }
 
 .carousel-btn:hover{
-  opacity:0.9;
+  transform:translateY(-50%) scale(1.08);
+  box-shadow:0 10px 22px rgba(0,0,0,0.25);
+  opacity:0.95;
 }
 
-  
+    /* Hide carousel arrows on mobile */
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none;
+  }
+}
+
+/* Featured post */
+.post-card.featured{
+  border:2px solid #0A4C8A;
+  background:linear-gradient(180deg,#ffffff,#f4f8fb);
+}
+
+.post-card.featured h3::after{
+  content:" ★ Latest";
+  font-size:13px;
+  color:#0A4C8A;
+  font-weight:600;
+}
+    
   </style>
 </head>
 <body>
@@ -247,14 +265,14 @@
       </div>
     </article>
 
-    <article class="post-card">
-      <h3>New Content & What’s Coming</h3>
-      <p>Updates on Aerospace 101 and Women in STEM.</p>
-      <div class="post-meta">
-        Published on Dec 14, 2025 —
-        <a href="posts/post4.html">Read more →</a>
-      </div>
-    </article>
+   <article class="post-card featured">
+  <h3>New Content & What’s Coming</h3>
+  <p>Updates on Aerospace 101 and Women in STEM.</p>
+  <div class="post-meta">
+    Published on Dec 14, 2025 —
+    <a href="posts/post4.html">Read more →</a>
+  </div>
+</article>
 
   </div>
 
