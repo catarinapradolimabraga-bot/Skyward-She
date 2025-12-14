@@ -183,6 +183,50 @@
 .profiles-button:hover{
   background:#083b6b;
 }
+.profiles-entry {
+  margin-top: 24px;
+}
+
+.profiles-card {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  max-width: 520px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.profiles-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(12,30,60,.12);
+}
+
+.profiles-card h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #0A4C8A;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.profiles-card p {
+  color: #6D7480;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.profiles-cta {
+  font-weight: 600;
+  color: #0A4C8A;
+}
+
+.profiles-note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6D7480;
+}
 
   </style>
 </head>
@@ -198,11 +242,21 @@
     and continue to shape — science, technology, engineering and mathematics.
   </p>
 
-  <div class="profiles-entry">
-    <a href="profiles/index.html" class="profiles-button">
-      Profiles →
-    </a>
-  </div>
+ <div class="profiles-entry">
+  <a href="profiles/index.html" class="profiles-card">
+    <h2>Profiles</h2>
+    <p>
+      Discover women who shaped — and continue to shape — science,
+      technology, engineering and mathematics across the world.
+    </p>
+    <span class="profiles-cta">Explore profiles →</span>
+  </a>
+
+  <p class="profiles-note">
+    This section will grow over time, with new profiles and articles added regularly.
+  </p>
+</div>
+
 </section>
 
 
