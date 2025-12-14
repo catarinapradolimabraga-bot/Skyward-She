@@ -161,6 +161,17 @@
     display: none;
   }
 }
+    /* Show arrows only on interaction (desktop) */
+.carousel-btn{
+  opacity:0;
+  pointer-events:none;
+}
+
+.posts-section:hover .carousel-btn{
+  opacity:1;
+  pointer-events:auto;
+}
+
 
 /* Featured post */
 .post-card.featured{
