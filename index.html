@@ -103,6 +103,60 @@
 @media (max-width:420px) {
   .post-card .thumb { height:12.post-card
     }
+
+.posts-section{
+  position:relative;
+  margin:40px 0;
+}
+
+.posts-carousel{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  padding:10px 4px;
+}
+
+.posts-carousel::-webkit-scrollbar{
+  display:none;
+}
+
+.post-card{
+  min-width:280px;
+  max-width:280px;
+  flex-shrink:0;
+}
+
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#0A4C8A;
+  color:#fff;
+  border:none;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:600;
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+  z-index:10;
+}
+
+.carousel-btn.left{
+  left:-10px;
+}
+
+.carousel-btn.right{
+  right:-10px;
+}
+
+.carousel-btn:hover{
+  opacity:0.9;
+}
+
+  
   </style>
 </head>
 <body>
@@ -158,37 +212,58 @@
     </section>
 
     <!-- POSTS GRID -->
-    <section>
-      <div class="posts">
-        <article class="post-card">
-          <h3>Why women in aerospace matter</h3>
-          <p>Diversity leads to safer, smarter aerospace systems — and representation inspires the next generation.</p>
-          <div class="post-meta">Published on Nov 26, 2025 — <a href="posts/post1.html">Read more →</a></div>
-        </article>
+    <section class="posts-section">
 
-        <article class="post-card">
-          <h3>How I started my research journey at 13</h3>
-          <p>Practical steps for high-school students: choose a question, find a mentor, document everything.</p>
-          <div class="post-meta">Published on Nov 26, 2025 — <a href="posts/post2.html">Read more →</a></div>
-        </article>
+  <button class="carousel-btn left" aria-label="Scroll left">
+    ←
+  </button>
 
-            <article class="post-card">
-        <h3>Vintage: The Space Age design language</h3>
-      <p>A look at 60s/70s NASA posters, typography and how the era still influences aerospace aesthetics.</p>
-<div class="post-meta">Published on Nov 28, 2025 — <a href="posts/post3.html">Read more →</a></div>
+  <div class="posts-carousel" id="postsCarousel">
+
+    <article class="post-card">
+      <h3>Why women in aerospace matter</h3>
+      <p>Diversity leads to safer, smarter aerospace systems.</p>
+      <div class="post-meta">
+        Published on Nov 26, 2025 —
+        <a href="posts/post1.html">Read more →</a>
+      </div>
     </article>
 
-<article class="post-card">
-  <h3>New Content & What’s Coming</h3>
-  <p>
-    Updates on new Aerospace 101 articles, new Women in STEM profiles,
-    and an overview of upcoming sections.
-  </p>
-  <div class="post-meta">
-    Published on Dec 14, 2025 —
-    <a href="posts/post4.html">Read more →</a>
+    <article class="post-card">
+      <h3>How I started my research journey at 13</h3>
+      <p>Practical steps for high-school students.</p>
+      <div class="post-meta">
+        Published on Nov 26, 2025 —
+        <a href="posts/post2.html">Read more →</a>
+      </div>
+    </article>
+
+    <article class="post-card">
+      <h3>Vintage: The Space Age design language</h3>
+      <p>How 60s/70s NASA aesthetics still shape aerospace.</p>
+      <div class="post-meta">
+        Published on Nov 28, 2025 —
+        <a href="posts/post3.html">Read more →</a>
+      </div>
+    </article>
+
+    <article class="post-card">
+      <h3>New Content & What’s Coming</h3>
+      <p>Updates on Aerospace 101 and Women in STEM.</p>
+      <div class="post-meta">
+        Published on Dec 14, 2025 —
+        <a href="posts/post4.html">Read more →</a>
+      </div>
+    </article>
+
   </div>
-</article>
+
+  <button class="carousel-btn right" aria-label="Scroll right">
+    →
+  </button>
+
+</section>
+
         
       </div>
     </section>
@@ -272,5 +347,20 @@
     - If you want me to also create the womeninstem.html file (I already prepared one earlier), tell me and I will paste it ready to save in the repo.
   -->
 
+<script>
+  const carousel = document.getElementById('postsCarousel');
+  const scrollAmount = 320;
+
+  document.querySelector('.carousel-btn.left')
+    .addEventListener('click', () => {
+      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+  document.querySelector('.carousel-btn.right')
+    .addEventListener('click', () => {
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+</script>
+  
 </body>
 </html>
