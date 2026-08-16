@@ -263,12 +263,16 @@ body {
 </head>
 <body>
 
-  <!-- HEADER -->
+ <!-- ========================================== -->
+  <!-- CABEÇALHO PRINCIPAL CORRIGIDO COM CONTROLES -->
+  <!-- ========================================== -->
   <header>
     <div class="container nav">
+      <!-- Nome do Blog -->
       <div class="brand">Skyward She</div>
+
+      <!-- Menu de Navegação Principal -->
       <nav>
-        <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -280,9 +284,10 @@ body {
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-        <!-- INÍCIO DOS CONTROLES: IDIOMA E TEMA -->
+
+      <!-- Controles de Idioma e Tema -->
       <div class="site-controls">
-        <!-- Menu de Idiomas -->
+        <!-- Seletor de Idiomas (Ordem Alfabética pelos Nomes Nativos) -->
         <select id="languageSelect" class="control-dropdown" onchange="changeLanguage(this.value)" aria-label="Selecione o Idioma">
           <option value="en">🌐 English (US)</option>
           <option value="de">🇩🇪 Deutsch</option>
@@ -319,17 +324,18 @@ body {
           <option value="zh-CN">🇨🇳 简体中文</option>
         </select>
 
-        <!-- Menu de Tema -->
+        <!-- Seletor de Tema (3 Modos) -->
         <select id="themeSelect" class="control-dropdown" onchange="setThemePreference(this.value)" aria-label="Selecione o Tema">
           <option value="system">💻 Sistema</option>
           <option value="light">☀️ Claro</option>
           <option value="dark">🌙 Escuro</option>
         </select>
       </div>
+    </div>
+  </header>
 
-      <!-- Elemento auxiliar para o tradutor carregar -->
-      <div id="google_translate_element" style="display: none;"></div>
-      <!-- FIM DOS CONTROLES -->
+  <!-- Elemento auxiliar oculto para o tradutor carregar -->
+  <div id="google_translate_element" style="display: none;"></div>
     </div></header>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -526,6 +532,76 @@ body {
       carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
 </script>
+
+<!-- ========================================== -->
+  <!-- SCRIPTS: MOTOR DE TRADUÇÃO E TEMA -->
+  <!-- ========================================== -->
+
+  <!-- 1. Script Oficial do Tradutor -->
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- 2. Lógica JavaScript dos Controles -->
+  <script>
+    /* --- LÓGICA DE TRADUÇÃO --- */
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    function changeLanguage(langCode) {
+      var selectField = document.querySelector(".goog-te-combo");
+      if (selectField) {
+        selectField.value = langCode;
+        selectField.dispatchEvent(new Event("change"));
+      }
+    }
+
+    /* --- LÓGICA DE TEMA (CLARO / ESCURO / SISTEMA) --- */
+    function setThemePreference(mode) {
+      localStorage.setItem("themeChoice", mode);
+      applyTheme(mode);
+    }
+
+    function applyTheme(mode) {
+      var systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var finalTheme = "light";
+
+      if (mode === "dark") {
+        finalTheme = "dark";
+      } else if (mode === "light") {
+        finalTheme = "light";
+      } else {
+        // Segue a configuração do sistema operacional do visitante
+        finalTheme = systemPrefersDark ? "dark" : "light";
+      }
+
+      // Aplica o atributo que ativa as cores CSS
+      document.documentElement.setAttribute("data-theme", finalTheme);
+
+      // Atualiza o seletor visual
+      var themeSelect = document.getElementById("themeSelect");
+      if (themeSelect) {
+        themeSelect.value = mode;
+      }
+    }
+
+    // Ouve se o usuário mudar o tema do Windows/Mac/Celular enquanto navega
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+      var currentChoice = localStorage.getItem("themeChoice") || "system";
+      if (currentChoice === "system") {
+        applyTheme("system");
+      }
+    });
+
+    // Inicia o tema correto ao carregar a página
+    (function initTheme() {
+      var savedChoice = localStorage.getItem("themeChoice") || "system";
+      applyTheme(savedChoice);
+    })();
+  </script>
+</body>
   
 </body>
 </html>
