@@ -198,7 +198,67 @@
   user-select: none;
   -webkit-user-drag: none;
 }
-    
+    /* =======================================================
+   1. PALETA DE CORES DINÂMICA (VARIÁVEIS DE TEMA)
+   ======================================================= */
+:root {
+  /* Cores do Modo Claro (Padrão) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f6f9;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --card-border: #e2e8f0;
+  --accent-color: #0b3d91; /* Azul Espacial */
+}
+
+/* Cores ativadas no Modo Escuro */
+[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --card-border: #30363d;
+  --accent-color: #58a6ff;
+}
+
+/* Aplica as variáveis ao fundo e texto com transição suave */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =======================================================
+   2. ESTILIZAÇÃO DOS SELETORES (IDIOMA E TEMA)
+   ======================================================= */
+
+/* Container que alinha os dois botões lado a lado */
+.site-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Estilo visual dos menus suspensos (dropdowns) */
+.control-dropdown {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efeito ao passar o cursor ou focar no menu */
+.control-dropdown:hover,
+.control-dropdown:focus {
+  border-color: var(--accent-color);
+}
   </style>
 </head>
 <body>
