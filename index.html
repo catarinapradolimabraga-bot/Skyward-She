@@ -93,7 +93,7 @@
     nav a:hover { color: var(--accent); }
 
     /* =======================================================
-       3. CONTROLES: IDIOMAS E MODO DE TEMA
+       3. CONTROLES: IDIOMAS E TEMA (LIGHT / DARK)
        ======================================================= */
     .site-controls {
       display: flex;
@@ -136,7 +136,6 @@
       font-family: "Bebas Neue", sans-serif;
     }
 
-    /* Hero */
     .hero {
       display: flex;
       gap: 28px;
@@ -170,7 +169,6 @@
     .hero-figure img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
     .btn { display: inline-block; padding: 12px 18px; background: var(--accent); color: #fff !important; border-radius: 9px; margin-top: 18px; font-weight: 600; }
 
-    /* Posts Carousel */
     .posts-section {
       position: relative;
       margin: 40px 0;
@@ -239,7 +237,6 @@
     .carousel-btn.left { left: -18px; }
     .carousel-btn.right { right: -18px; }
 
-    /* About Section */
     .about-section { padding: 36px 0 28px; }
     .about-wrap { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
     .about-img { flex: 0 0 360px; min-width: 220px; }
@@ -248,7 +245,6 @@
     .about-text h2 { color: var(--accent); font-size: 28px; margin: 0 0 12px; }
     .about-text p { color: var(--muted); line-height: 1.6; }
 
-    /* Contact Section */
     .contact-wrap { padding: 36px 0; }
     .contact-grid { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
     .contact-card { background: var(--card); padding: 24px; border-radius: 12px; box-shadow: 0 8px 18px rgba(12,30,60,0.04); border: 1px solid var(--border); }
@@ -261,7 +257,6 @@
     .footer { padding: 24px 0; text-align: center; color: var(--muted); font-size: 14px; margin-top: 28px; }
     .muted { color: var(--muted); }
 
-    /* Responsividade */
     @media (max-width: 768px) {
       .nav { flex-direction: column; align-items: flex-start; gap: 12px; }
       .site-controls { width: 100%; justify-content: flex-start; }
@@ -274,15 +269,11 @@
 </head>
 <body>
 
-  <!-- ========================================== -->
-  <!-- CABEÇALHO COMPLETO E UNIFICADO -->
-  <!-- ========================================== -->
+  <!-- CABEÇALHO -->
   <header>
     <div class="container nav">
-      <!-- Marca -->
       <div class="brand">Skyward She</div>
 
-      <!-- Menu Principal -->
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -296,9 +287,10 @@
         </ul>
       </nav>
 
-      <!-- Controles de Idioma e Tema -->
+      <!-- CONTROLES -->
       <div class="site-controls">
-        <select id="languageSelect" class="control-dropdown" onchange="changeLanguage(this.value)" aria-label="Selecione o Idioma">
+        <!-- Idiomas -->
+        <select id="languageSelect" class="control-dropdown notranslate" onchange="changeLanguage(this.value)" aria-label="Select Language">
           <option value="en">🌐 English (US)</option>
           <option value="de">🇩🇪 Deutsch</option>
           <option value="en-gb">🇬🇧 English (UK)</option>
@@ -334,23 +326,19 @@
           <option value="zh-CN">🇨🇳 简体中文</option>
         </select>
 
-        <select id="themeSelect" class="control-dropdown" onchange="setThemePreference(this.value)" aria-label="Selecione o Tema">
-          <option value="system">💻 Sistema</option>
-          <option value="light">☀️ Claro</option>
-          <option value="dark">🌙 Escuro</option>
+        <!-- Tema: Somente Light e Dark (em inglês, traduzíveis) -->
+        <select id="themeSelect" class="control-dropdown" onchange="setThemePreference(this.value)" aria-label="Select Theme">
+          <option value="light">☀️ Light</option>
+          <option value="dark">🌙 Dark</option>
         </select>
       </div>
     </div>
   </header>
 
-  <!-- Elemento auxiliar para o motor de tradução -->
   <div id="google_translate_element" style="display: none;"></div>
 
-  <!-- ========================================== -->
   <!-- CONTEÚDO PRINCIPAL -->
-  <!-- ========================================== -->
   <main class="container">
-
     <!-- HERO -->
     <section class="hero">
       <div class="hero-card">
@@ -465,25 +453,10 @@
     <div class="footer">© Skyward She — Catarina • Porto Velho, Rondônia</div>
   </main>
 
-  <!-- ========================================== -->
-  <!-- SCRIPTS: CARROSSEL, TRADUÇÃO E TEMAS -->
-  <!-- ========================================== -->
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  <script>
-    /* 1. Lógica do Carrossel */
-    const carousel = document.getElementById('postsCarousel');
-    const scrollAmount = 300;
-
-    document.querySelector('.carousel-btn.left').addEventListener('click', () => {
-      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-
-    document.querySelector('.carousel-btn.right').addEventListener('click', () => {
-      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-
-    /* 2. Lógica de Tradução */
+  <!-- =======================================================
+       SCRIPTS: CARROSSEL, TRADUÇÃO E TEMAS (LIGHT / DARK)
+       ======================================================= -->
+  <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
@@ -492,48 +465,53 @@
     }
 
     function changeLanguage(langCode) {
-      var selectField = document.querySelector(".goog-te-combo");
-      if (selectField) {
-        selectField.value = langCode;
-        selectField.dispatchEvent(new Event("change"));
+      if (!langCode) return;
+      var langTarget = langCode.split('-')[0];
+      
+      if (langCode === 'en') {
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + location.hostname;
+      } else {
+        document.cookie = "googtrans=/en/" + langTarget + "; path=/;";
+        document.cookie = "googtrans=/en/" + langTarget + "; path=/; domain=." + location.hostname;
       }
+      location.reload();
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    /* Carrossel */
+    const carousel = document.getElementById('postsCarousel');
+    const scrollAmount = 300;
+    const leftBtn = document.querySelector('.carousel-btn.left');
+    const rightBtn = document.querySelector('.carousel-btn.right');
+
+    if (leftBtn && carousel) {
+      leftBtn.addEventListener('click', () => carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+    }
+    if (rightBtn && carousel) {
+      rightBtn.addEventListener('click', () => carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
     }
 
-    /* 3. Lógica de Tema (Claro / Escuro / Sistema) */
+    /* Alternância de Tema (Light / Dark) */
     function setThemePreference(mode) {
       localStorage.setItem("themeChoice", mode);
       applyTheme(mode);
     }
 
     function applyTheme(mode) {
-      var systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      var finalTheme = "light";
-
-      if (mode === "dark") {
-        finalTheme = "dark";
-      } else if (mode === "light") {
-        finalTheme = "light";
-      } else {
-        finalTheme = systemPrefersDark ? "dark" : "light";
-      }
-
+      const finalTheme = mode === "dark" ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", finalTheme);
 
-      var themeSelect = document.getElementById("themeSelect");
+      const themeSelect = document.getElementById("themeSelect");
       if (themeSelect) {
-        themeSelect.value = mode;
+        themeSelect.value = finalTheme;
       }
     }
 
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
-      var currentChoice = localStorage.getItem("themeChoice") || "system";
-      if (currentChoice === "system") {
-        applyTheme("system");
-      }
-    });
-
     (function initTheme() {
-      var savedChoice = localStorage.getItem("themeChoice") || "system";
+      const savedChoice = localStorage.getItem("themeChoice") || "light";
       applyTheme(savedChoice);
     })();
   </script>
