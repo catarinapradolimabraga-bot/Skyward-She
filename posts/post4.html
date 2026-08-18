@@ -1,145 +1,514 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>New Content & What’s Coming — Skyward She</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+  <title>Skyward She — Where girls engineer the future of aerospace</title>
+
+  <meta name="description" content="Skyward She — a space-age inspired blog by Catarina from Porto Velho, Rondônia. Women in aerospace, projects, and tips for young researchers.">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    body{
-      margin:0;
-      background:#F7F8FA;
-      font-family:'Poppins',Arial,sans-serif;
-      color:#1d2a3a;
+    /* =======================================================
+       1. PALETA DE CORES E VARIÁVEIS DE TEMA
+       ======================================================= */
+    :root {
+      --bg: #F7F8FA;
+      --card: #ffffff;
+      --accent: #0A4C8A;
+      --text: #1d2a3a;
+      --muted: #6D7480;
+      --border: #e2e8f0;
+      --soft: #F1F4F6;
+      --maxw: 1100px;
+      --radius: 12px;
     }
 
-    .container{
-      max-width:900px;
-      margin:40px auto;
-      padding:0 16px;
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --card: #161b22;
+      --accent: #58a6ff;
+      --text: #f0f6fc;
+      --muted: #8b949e;
+      --border: #30363d;
+      --soft: #21262d;
     }
 
-    .card{
-      background:#fff;
-      padding:28px;
-      border-radius:12px;
-      box-shadow:0 10px 24px rgba(12,30,60,0.06);
+    * { box-sizing: border-box; }
+
+    html, body {
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      font-family: 'Poppins', Arial, sans-serif;
+      color: var(--text);
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    h1{
-      font-family:'Bebas Neue',sans-serif;
-      color:#0A4C8A;
-      font-size:34px;
-      margin-bottom:6px;
+    a { color: var(--accent); text-decoration: none; }
+
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+
+    /* =======================================================
+       2. CABEÇALHO E NAVEGAÇÃO
+       ======================================================= */
+    header {
+      padding: 16px 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
-    .meta{
-      font-size:13px;
-      color:#9aa4b2;
-      margin-bottom:20px;
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    p{
-      color:#6D7480;
-      line-height:1.7;
-      margin-bottom:16px;
+    .brand {
+      font-family: "Bebas Neue", sans-serif;
+      color: var(--accent);
+      font-size: 28px;
+      letter-spacing: 1px;
     }
 
-    h2{
-      font-family:'Bebas Neue',sans-serif;
-      color:#0f3f65;
-      margin-top:28px;
-      margin-bottom:10px;
-      font-size:22px;
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .back{
-      display:inline-block;
-      margin-top:30px;
-      background:#0A4C8A;
-      color:#fff;
-      padding:10px 16px;
-      border-radius:9px;
-      text-decoration:none;
-      font-weight:600;
+    nav li { font-weight: 600; font-size: 14px; }
+    nav a { color: var(--text); transition: color 0.2s ease; }
+    nav a:hover { color: var(--accent); }
+
+    /* =======================================================
+       3. CONTROLES: IDIOMAS E TEMA (LIGHT / DARK)
+       ======================================================= */
+    .site-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    footer{
-      margin-top:40px;
-      text-align:center;
-      color:#98a3ad;
-      font-size:13px;
+    .control-dropdown {
+      background-color: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-family: inherit;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s ease, background-color 0.3s ease;
+    }
+
+    .control-dropdown:hover,
+    .control-dropdown:focus {
+      border-color: var(--accent);
+    }
+
+    /* Oculta barras padrão indesejadas do Google Translate */
+    .goog-te-banner-frame.skiptranslate,
+    .goog-te-gadget-icon,
+    #goog-gt-tt {
+      display: none !important;
+    }
+    body { top: 0px !important; }
+
+    /* =======================================================
+       4. SEÇÕES DO SITE
+       ======================================================= */
+    .hero-card h1,
+    .section-title,
+    .about-text h2 {
+      font-family: "Bebas Neue", sans-serif;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      gap: 28px;
+      margin: 24px 0 28px;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      flex: 1;
+      min-width: 300px;
+      background: var(--card);
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: 0 12px 28px rgba(12, 30, 60, 0.06);
+      border: 1px solid var(--border);
+    }
+
+    .hero-card h1 {
+      color: var(--accent);
+      font-size: 34px;
+      margin: 0 0 12px;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .hero-figure { flex: 0 0 380px; min-width: 260px; }
+    .hero-figure img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+    .btn { display: inline-block; padding: 12px 18px; background: var(--accent); color: #fff !important; border-radius: 9px; margin-top: 18px; font-weight: 600; }
+
+    /* Carrossel de Artigos */
+    .posts-section {
+      position: relative;
+      margin: 40px 0;
+    }
+
+    .posts-carousel {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 10px 4px;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .posts-carousel::-webkit-scrollbar { display: none; }
+
+    /* Todos os cartões de artigos seguem o mesmo padrão */
+    .post-card {
+      min-width: 280px;
+      max-width: 280px;
+      flex-shrink: 0;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(12, 30, 60, 0.04);
+      border: 1px solid var(--border);
+    }
+
+    .post-card h3 { margin: 0 0 10px; font-size: 18px; color: var(--text); }
+    .post-card p { margin: 0; color: var(--muted); line-height: 1.5; }
+    .post-meta { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+      transition: transform .2s ease, opacity .2s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .posts-section:hover .carousel-btn { opacity: 1; pointer-events: auto; }
+    .carousel-btn:hover { transform: translateY(-50%) scale(1.08); }
+    .carousel-btn.left { left: -18px; }
+    .carousel-btn.right { right: -18px; }
+
+    /* Seção Sobre */
+    .about-section { padding: 36px 0 28px; }
+    .about-wrap { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+    .about-img { flex: 0 0 360px; min-width: 220px; }
+    .about-img img { width: 100%; border-radius: 12px; box-shadow: 0 8px 22px rgba(0,0,0,0.06); border: 1px solid var(--border); }
+    .about-text { flex: 1; min-width: 240px; }
+    .about-text h2 { color: var(--accent); font-size: 28px; margin: 0 0 12px; }
+    .about-text p { color: var(--muted); line-height: 1.6; }
+
+    /* Seção Contato */
+    .contact-wrap { padding: 36px 0; }
+    .contact-grid { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+    .contact-card { background: var(--card); padding: 24px; border-radius: 12px; box-shadow: 0 8px 18px rgba(12,30,60,0.04); border: 1px solid var(--border); }
+    .contact-card input, .contact-card textarea {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .footer { padding: 24px 0; text-align: center; color: var(--muted); font-size: 14px; margin-top: 28px; }
+    .muted { color: var(--muted); }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .nav { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .site-controls { width: 100%; justify-content: flex-start; }
+      .carousel-btn { display: none; }
+      .hero { flex-direction: column; }
+      .hero-figure { order: -1; }
+      .about-wrap { flex-direction: column; }
     }
   </style>
 </head>
-
 <body>
-  <main class="container">
-    <div class="card">
 
-      <h1>New Content & What’s Coming to Skyward She</h1>
-      <div class="meta">Published on December 14, 2025</div>
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container nav">
+      <div class="brand">Skyward She</div>
 
-      <p>
-        Skyward She is growing — and this update marks an important step in the
-        evolution of the site.
-      </p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="posts/post1.html">Articles</a></li>
+          <li><a href="aerospace101.html">Aerospace 101</a></li>
+          <li><a href="women/index.html">Women in STEM</a></li>
+          <li><a href="women/journeys/index.html">Stories &amp; Journeys</a></li>
+          <li><a href="women/resources/index.html">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-      <p>
-        New content has been added to <strong>Aerospace 101</strong>, expanding
-        explanations on aerospace fundamentals and making the section more
-        complete for students who are just starting their journey.
-      </p>
+      <!-- CONTROLES -->
+      <div class="site-controls">
+        <!-- Idiomas -->
+        <select id="languageSelect" class="control-dropdown notranslate" onchange="changeLanguage(this.value)" aria-label="Select Language">
+          <option value="en">🌐 English (US)</option>
+          <option value="de">🇩🇪 Deutsch</option>
+          <option value="en-gb">🇬🇧 English (UK)</option>
+          <option value="es">🇪🇸 Español</option>
+          <option value="fr">🇫🇷 Français</option>
+          <option value="id">🇮🇩 Bahasa Indonesia</option>
+          <option value="it">🇮🇹 Italiano</option>
+          <option value="jv">🇮🇩 Basa Jawa</option>
+          <option value="pcm">🇳🇬 Naijá</option>
+          <option value="pt">🇧🇷 Português (Brasil)</option>
+          <option value="pt-pt">🇵🇹 Português (Portugal)</option>
+          <option value="tl">🇵🇭 Tagalog</option>
+          <option value="tr">🇹🇷 Türkçe</option>
+          <option value="vi">🇻🇳 Tiếng Việt</option>
+          <option value="ru">🇷🇺 Русский</option>
+          <option value="he">🇮🇱 עברית</option>
+          <option value="ur">🇵🇰 اردو</option>
+          <option value="ar">🇸🇦 العربية</option>
+          <option value="fa">🇮🇷 فارسی</option>
+          <option value="am">🇪🇹 አማርኛ</option>
+          <option value="mr">🇮🇳 मराठी</option>
+          <option value="hi">🇮🇳 हिन्दी</option>
+          <option value="bho">🇮🇳 भोजपुरी</option>
+          <option value="bn">🇧🇩 বাংলা</option>
+          <option value="gu">🇮🇳 ગુજરાતી</option>
+          <option value="ta">🇮🇳 தமிழ்</option>
+          <option value="te">🇮🇳 తెలుగు</option>
+          <option value="kn">🇮🇳 ಕನ್ನಡ</option>
+          <option value="th">🇹🇭 ไทย</option>
+          <option value="ha">🇳🇬 Harshen Hausa</option>
+          <option value="ko">🇰🇷 한국어</option>
+          <option value="ja">🇯🇵 日本語</option>
+          <option value="zh-CN">🇨🇳 简体中文</option>
+        </select>
 
-      <p>
-        At the same time, <strong>Women in STEM</strong> has gained new profiles
-        highlighting women who shaped — and continue to shape — science,
-        technology, engineering and mathematics across different countries and
-        backgrounds.
-      </p>
-
-      <h2>What’s next?</h2>
-
-      <p>
-        <strong>Stories & Journeys</strong> will focus on personal paths in STEM —
-        including my own projects, challenges, learning experiences, and stories
-        from girls who started early and chose to build their future in science
-        and engineering.
-      </p>
-
-      <p>
-        <strong>Resources</strong> will be a curated collection of books, films,
-        documentaries, videos, competitions and learning materials related to
-        STEM, aerospace and science culture.
-      </p>
-
-      <p>
-        These sections will grow gradually, alongside new profiles and articles,
-        as Skyward She continues its mission to inspire curiosity, confidence
-        and ambition.
-      </p>
-
-      <a class="back" href="../index.html">← Back to Home</a>
+        <!-- Tema (Light / Dark) -->
+        <select id="themeSelect" class="control-dropdown" onchange="setThemePreference(this.value)" aria-label="Select Theme">
+          <option value="light">☀️ Light</option>
+          <option value="dark">🌙 Dark</option>
+        </select>
+      </div>
     </div>
+  </header>
 
-    <footer>
-      © Skyward She — Catarina • Porto Velho, Rondônia
-    </footer>
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Engineering, history and a female perspective</h1>
+        <p>Skyward She is a space-age inspired blog by Catarina, an aspiring aerospace engineer from Porto Velho. Here you'll find explainers, profiles of women in aerospace, vintage space-age stories, and practical tips to begin your research journey.</p>
+        <a class="btn" href="posts/post1.html">Read latest</a>
+      </div>
+
+      <div class="hero-figure">
+        <img alt="Earth from space" src="https://raw.githubusercontent.com/catarinapradolimabraga-bot/Skyward-She/main/hero-earth.jpg">
+        <div style="font-size:13px;color:var(--muted);margin-top:8px;text-align:center">Featured: How the Space Age still shapes modern aerospace design</div>
+      </div>
+    </section>
+
+    <!-- CARROSSEL DE ARTIGOS PADRONIZADOS -->
+    <section class="posts-section">
+      <button class="carousel-btn left" aria-label="Scroll left">←</button>
+
+      <div class="posts-carousel" id="postsCarousel">
+        <article class="post-card">
+          <h3>Why women in aerospace matter</h3>
+          <p>Diversity leads to safer, smarter aerospace systems.</p>
+          <div class="post-meta">
+            Published on Nov 26, 2025 — <a href="posts/post1.html">Read more →</a>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <h3>How I started my research journey at 13</h3>
+          <p>Practical steps for high-school students.</p>
+          <div class="post-meta">
+            Published on Nov 26, 2025 — <a href="posts/post2.html">Read more →</a>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <h3>Vintage: The Space Age design language</h3>
+          <p>How 60s/70s NASA aesthetics still shape aerospace.</p>
+          <div class="post-meta">
+            Published on Nov 28, 2025 — <a href="posts/post3.html">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Artigo 4 com visual normal, sem borda azul e sem estrelinha -->
+        <article class="post-card">
+          <h3>New Content &amp; What’s Coming</h3>
+          <p>Updates on Aerospace 101 and Women in STEM.</p>
+          <div class="post-meta">
+            Published on Dec 14, 2025 — <a href="posts/post4.html">Read more →</a>
+          </div>
+        </article>
+      </div>
+
+      <button class="carousel-btn right" aria-label="Scroll right">→</button>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="about" class="about-section">
+      <div class="about-wrap">
+        <div class="about-img">
+          <img src="https://raw.githubusercontent.com/catarinapradolimabraga-bot/Skyward-She/main/about-math.jpg" alt="Study board">
+        </div>
+        <div class="about-text">
+          <h2>About Catarina</h2>
+          <p>Catarina is a 14-year-old aspiring aerospace engineer from Porto Velho, a city in the northern Brazilian state of Rondônia. Born on November 27, she is passionate about physics, aerospace engineering, and the future of space exploration.</p>
+          <p>She discovered her love for STEM through school projects, research, and science olympiads. Every challenge — from studying flight mechanics to writing about women in aerospace — brings her closer to the future she dreams of building.</p>
+          <p>Through <strong>Skyward She</strong>, Catarina hopes to inspire other girls, especially those from places where STEM opportunities feel far away, to believe that curiosity and ambition can take them anywhere — even to the stars.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contact" class="contact-wrap">
+      <div class="contact-grid">
+        <div style="flex:1;min-width:260px;">
+          <div style="margin-bottom:12px;">
+            <h3 style="margin:0;font-family:'Bebas Neue',sans-serif;color:var(--accent);font-size:24px;">Contact</h3>
+          </div>
+          <p class="muted">Want to collaborate, share a story, or suggest a topic? Send a quick message below or email directly.</p>
+          <p style="margin-top:12px;">
+            <strong>Email:</strong> <a href="mailto:catarinapradolimabraga@gmail.com">catarinapradolimabraga@gmail.com</a>
+          </p>
+        </div>
+
+        <div style="flex:1;min-width:320px;max-width:540px;">
+          <form class="contact-card" action="https://formspree.io/f/xqavnaaw" method="POST" accept-charset="utf-8">
+            <input type="hidden" name="_subject" value="Skyward She contact form submission">
+            <label style="display:block;margin-bottom:10px;">
+              <strong style="display:block;margin-bottom:6px;">Name</strong>
+              <input type="text" name="name" required style="width:100%;padding:10px;border-radius:8px;">
+            </label>
+
+            <label style="display:block;margin-bottom:10px;">
+              <strong style="display:block;margin-bottom:6px;">Email</strong>
+              <input type="email" name="email" required style="width:100%;padding:10px;border-radius:8px;">
+            </label>
+
+            <label style="display:block;margin-bottom:12px;">
+              <strong style="display:block;margin-bottom:6px;">Message</strong>
+              <textarea name="message" rows="5" required style="width:100%;padding:10px;border-radius:8px;"></textarea>
+            </label>
+
+            <div style="display:flex;gap:10px;align-items:center;">
+              <button type="submit" style="background:var(--accent);color:#fff;padding:10px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:600;">Send</button>
+              <span style="color:var(--muted);font-size:13px;">We'll reply to the email you provide.</span>
+            </div>
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">© Skyward She — Catarina • Porto Velho, Rondônia</div>
   </main>
-  <!-- Elemento auxiliar invisível -->
-<div id="google_translate_element" style="display: none;"></div>
 
-<!-- Script do Motor de Tradução -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- SCRIPTS -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    function changeLanguage(langCode) {
+      if (!langCode) return;
+      var langTarget = langCode.split('-')[0];
+      
+      if (langCode === 'en') {
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + location.hostname;
+      } else {
+        document.cookie = "googtrans=/en/" + langTarget + "; path=/;";
+        document.cookie = "googtrans=/en/" + langTarget + "; path=/; domain=." + location.hostname;
+      }
+      location.reload();
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    /* Carrossel */
+    const carousel = document.getElementById('postsCarousel');
+    const scrollAmount = 300;
+    const leftBtn = document.querySelector('.carousel-btn.left');
+    const rightBtn = document.querySelector('.carousel-btn.right');
+
+    if (leftBtn && carousel) {
+      leftBtn.addEventListener('click', () => carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+    }
+    if (rightBtn && carousel) {
+      rightBtn.addEventListener('click', () => carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+    }
+
+    /* Alternância de Tema */
+    function setThemePreference(mode) {
+      localStorage.setItem("themeChoice", mode);
+      applyTheme(mode);
+    }
+
+    function applyTheme(mode) {
+      const finalTheme = mode === "dark" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", finalTheme);
+
+      const themeSelect = document.getElementById("themeSelect");
+      if (themeSelect) {
+        themeSelect.value = finalTheme;
+      }
+    }
+
+    (function initTheme() {
+      const savedChoice = localStorage.getItem("themeChoice") || "light";
+      applyTheme(savedChoice);
+    })();
+  </script>
+
 </body>
 </html>
